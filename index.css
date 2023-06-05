@@ -9,7 +9,6 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(rgba(33,180,226,0.7), rgba(200,94,199,0.8));
 }
 
 h1{
@@ -20,13 +19,13 @@ h1{
     -webkit-text-stroke-color: white;
     font-size: 100px;
     font-family: 'Orbitron', sans-serif;
-    animation-name: zoom;
-    animation-duration: 5s;
+    animation-name: updown;
+    animation-duration: 3s;
 }
 
-@keyframes zoom {
-    from{ font-size: 25px;}
-    to{font-size: 100px;}
+@keyframes updown {
+    from{ transform: translateY(-450px);}
+    to{transform: translateY(0px);}
 }
 .bg {
     background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
@@ -112,7 +111,7 @@ h1{
     animation: sf-fly-by-1 10s linear infinite;
 }
 .star-field .layer:nth-child(2) {
-    animation: sf-fly-by-2 5s linear infinite;
+    animation: sf-fly-by-2 10s linear infinite;
 }
 .star-field .layer:nth-child(3) {
     animation: sf-fly-by-3 5s linear infinite;
