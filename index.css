@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@300&display=swap');
 @import url('https://fonts.cdnfonts.com/css/cute-zealand');
+@import url('https://fonts.cdnfonts.com/css/desonanz');
+@import url('https://fonts.cdnfonts.com/css/pt-mono');
+@import url('https://fonts.cdnfonts.com/css/alatsi-2');
 
 html{
     overflow-y: scroll;
@@ -220,22 +223,21 @@ a{
 }
 
 form{
-    display: block;
+    display: grid;
+    margin-left: 110px;
+    margin-right: 300px;
+    margin-top: -30px;
 }
 
 .login-form{
     text-align: center;
-    background-color: cadetblue;
-    margin-right: 300px;
-    margin-left: 300px;
+    background: linear-gradient(200deg, #326fa8, #285a8a, cadetblue ,#7abcfa) ;  
+    margin-right: 500px;
+    margin-left: 500px;
     margin-top: 20px;
-    padding-top: 3px;
-    padding-bottom: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     
-}
-
-label{
-    padding-top: 20px;
 }
 
 .games-heading{
@@ -254,7 +256,7 @@ label{
     font-weight: 500;
     -webkit-text-stroke-color: white;
     font-size: 50px;
-    font-family: 'Cute Zealand', sans-serif;
+    font-family: 'desonanz', sans-serif;
 }
 
 .games{
@@ -266,8 +268,8 @@ label{
 }
 
 label{   
-    font-size: 30px;
-    font-family: 'Cute Zealand', sans-serif;
+    font-size: 15px;
+    text-align: left; 
 }
 
 .games:hover{
@@ -277,7 +279,11 @@ label{
 
 input{
     font-size: 20px;
-    margin-top: 30px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    font-family: 'PT Mono', sans-serif;
 }
 
 button[type="submit"]{
@@ -286,9 +292,26 @@ button[type="submit"]{
     padding-right: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
+    border-radius: 20px;
     font-size: 20px;
-    font-family: 'Cute Zealand', sans-serif;
+    cursor: pointer;
+    background-color: #326fa8;
+    font-family: 'Alatsi', sans-serif;                                                
 }
 
+.rememberme{
+    margin-left: 170px;
+}
 
+button[type="submit"]:hover{
+    background-color: #e3dddc;
+    color: #326fa8;
+}   
 
+#remember{
+    margin-left: -190px;
+}
+
+.rememberme a{
+    margin-left: 80px;
+}
