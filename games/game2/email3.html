@@ -243,82 +243,17 @@
   margin-right: auto;
 }
   
-
   </style>
 
-<script>
-  var descriptionBox;
-  var score = 0;
-
-function showDescription1(description, icon) {
-  if (!descriptionBox) {
-    descriptionBox = document.createElement('div');
-    descriptionBox.className = 'description1';
-    document.body.appendChild(descriptionBox);
-  }
-  descriptionBox.innerHTML += description + '<br><br>';
-
-  var iconElement = icon.querySelector('.icon');
-  iconElement.classList.toggle('checked');
-  score++;
-  icon.onclick = null;
-
-  updateScore();
-}
-
-
-function showDescription2(description, icon) {
-  if (!descriptionBox) {
-    descriptionBox = document.createElement('div');
-    descriptionBox.className = 'description1';
-    document.body.appendChild(descriptionBox);
-  }
-  descriptionBox.innerHTML += description + '<br><br>';
-
-  var iconElement = icon.querySelector('.icon');
-  iconElement.classList.toggle('wrongchecked');
-  score--;
-  icon.onclick = null;
-
-  updateScore();
-}
-
-function updateScore() {
-    var scoreElement = document.getElementById('score');
-    scoreElement.textContent = 'Score: ' + score;
-  }
-
-  function showResult() {
-    var resultBox = document.createElement('div');
-    resultBox.className = 'result-box';
-
-    var scoreText = document.createElement('p');
-    scoreText.textContent = 'Score: ' + score +'/5';
-
-    var nextButton = document.createElement('button');
-    nextButton.textContent = 'Next';
-    nextButton.addEventListener('click', function() {
-      
-      window.location.href = 'email2.html';
-    });
-
-    resultBox.appendChild(scoreText);
-    resultBox.appendChild(nextButton);
-    document.body.appendChild(resultBox);
-
-    
-  }
-
-
-</script>
+<script src="game2.js"></script>
 
 <div class="score" id="score">Score: 0</div>
 
 <div class="rectangle">
   <h2 class="rectangle-heading">What is wrong with this email?</h2>
   <div class="overlay">
-    <img src="images/uwin.png" alt="Image" width="200" height="90" class="center">
-    <div class="email-header"><span onclick="showDescription1('1. ', this)">From: finance-noreply@uwindsor.ca <span class="icon">1</span> </span></div>
+    <img src="images/uwin.png" alt="Image" width="250" height="90" class="center">
+    <div class="email-header"><span onclick="showDescription2('1. ', this)">From: finance-noreply@uwindsor.ca <span class="icon">1</span> </span></div>
     <div class="email-header"><span onclick="showDescription1('2. ', this)">To: <span class="icon">2</span> </span> </div>
     <div class="email-subject">Subject: Inter/Summer Tuition</div>
     <div class="email-body">
@@ -328,17 +263,17 @@ function updateScore() {
 
       <p>It has come to our attention that your tuition payment has not been completed. </p>
       
-      <p onclick="showDescription1('1. ',this)" >  
+      <p onclick="showDescription1('3. ',this)" >  
         Due to the UWindsor Student website not being in operation for the next few days, we advise you to cantact us immidiatly through our financial helpline indicated below. <span class="icon">3</span> 
       </p>
       
-      <p onclick="showDescription1('3. ', this)"><u>509-234 5676</u> <span class="icon">4</span> </p>
+      <p onclick="showDescription1('4. ', this)"><u>509-234 5676</u> <span class="icon">4</span> </p>
       
-      <p onclick="showDescription1('1. ',this)" >  
+      <p onclick="showDescription1('5. ',this)" >  
         It is crucial to note that if the outstanding tuition payment is not received within the next 24 hours, interest will begin to accumulate on the unpaid balance. We strongly urge you to take immediate action to prevent further financial implications. <span class="icon">5</span> 
       </p>
 
-      <p onclick="showDescription1('4. ', this)">To mitigate any potential adverse affects and ensure the seamless continuation of your studies, we kindly request that you immediately contact our dedicated helpline <span class="icon">6</span> </p>
+      <p onclick="showDescription1('6. ', this)">To mitigate any potential adverse affects and ensure the seamless continuation of your studies, we kindly request that you immediately contact our dedicated helpline <span class="icon">6</span> </p>
       Thank You. <br>
       
       
@@ -353,7 +288,7 @@ function updateScore() {
 </div>
 
 
-<button class="done-button" onclick="showResult()">Done</button>
+<button class="done-button" onclick="showResult('start.html')">Done</button>
 
 </body>
 </html>
