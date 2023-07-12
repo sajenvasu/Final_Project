@@ -229,12 +229,20 @@ form{
     margin-top: -30px;
 }
 
+#logintab{
+    margin-right: 1000px;
+    margin-top: 20px;
+}
+
+#createtab{
+    margin-right: 400px;
+    margin-left: 600px;
+}
+
 .login-form{
     text-align: center;
     background: linear-gradient(200deg, #326fa8, #285a8a, cadetblue ,#7abcfa) ;  
-    margin-right: 500px;
-    margin-left: 500px;
-    margin-top: 20px;
+    
     padding-top: 100px;
     padding-bottom: 100px;
     
@@ -297,19 +305,6 @@ button[type="submit"]{
     cursor: pointer;
     background-color: #326fa8;
     font-family: 'Alatsi', sans-serif;                                                
-}
-
-
-.accCreate{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #326fa8;
-    font-family: 'Alatsi', sans-serif;  
 }
 
 .rememberme{

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="index.js"></script>
 
 </head>
@@ -30,7 +31,7 @@
 
         <div class="developed">Developed by Sameeksha Abhijit Nair, Sajen Vasuthevan and Jasnoor Mallhi</div>
     </div>
-   
+   <div id="react-component-test"></div>
     <div id = "gamestab">
         <h3 class="games-heading">GAMES</h3>
         <a href="games/game1/game1.html" class="game1"><img src="pictures\password_strength.png" alt="password_strength" class="games"></a>
@@ -41,12 +42,12 @@
         <div class="login-form">
             <h3 class="login-heading">Login</h3>
             <form class="login">
-                <input type="text" id="username" name="username" required placeholder="Username"></input>
-                <br></br>
-                <input type="password" id="password" name="password" required placeholder="Password"></input>
-                <br></br>
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <br>
+                <input type="password" id="password" name="password" required placeholder="Password">
+                <br>
                 <div class="rememberme">
-                    <input type="checkbox" id="remember" name="rememberme"></input>
+                    <input type="checkbox" id="remember" name="rememberme">
                     <label for="rememberme">Remember Me</label>
                     <a href="">Forgot Password?</a>
                 </div>
@@ -54,22 +55,25 @@
                 
             </form>
             <h4>Or</h4>
+            <a href="#createtab">Create an Account</a>
+        </div>
+        
+    </div>
+    <div id = "createtab">
+        <div class="login-form">
+            <h3 class="login-heading">Create Account</h3>
+            <form class="login">
+                <input type="text" id="username" name="username" required placeholder="Username">
+                <br>
+                <input type="password" id="password" name="password" required placeholder="Password">
+                <br>
+                <input type="password" id="passwordcheck" name="passwordcheck" required placeholder="Confirm Password">
+                <button type="submit">Create</button>
+                
+            </form>
+            <h4>Or</h4>
             <button class="accCreate" onclick="createaccount()">Create an Account</button>
         </div>
 
-</div>
-<div id = "createtab">
-    <div class="login-form">
-        <h3 class="login-heading">Create Account</h3>
-        <form class="login">
-            <input type="text" id="username" name="username" required placeholder="Username"></input>
-            <br></br>
-            <input type="password" id="password" name="password" required placeholder="Password"></input>
-            <br></br>
-            <input type="password" id="passwordcheck" name="passwordcheck" required placeholder="Confirm Password"></input>
-            <button type="submit">Create</button>    
-        </form>
-        <button class="accCreate" onclick="createaccount()" style="margin-top: 30px; margin-left: -20px;">Back</button>
-    </div>
 </body>
 </html>
