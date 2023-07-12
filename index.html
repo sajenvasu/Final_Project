@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="index.js"></script>
+    <script src = "react-component.js"></script>
 
 </head>
 
@@ -37,43 +38,5 @@
         <a href="games/game1/game1.html" class="game1"><img src="pictures\password_strength.png" alt="password_strength" class="games"></a>
         <a href="games/game1/game1.html" class="game1"><img src="pictures\phishing.jpeg" alt="phishing" class="games" style="margin-left: 100px;"></a>
     </div>
-
-    <div id = "logintab">
-        <div class="login-form">
-            <h3 class="login-heading">Login</h3>
-            <form class="login">
-                <input type="text" id="username" name="username" required placeholder="Username">
-                <br>
-                <input type="password" id="password" name="password" required placeholder="Password">
-                <br>
-                <div class="rememberme">
-                    <input type="checkbox" id="remember" name="rememberme">
-                    <label for="rememberme">Remember Me</label>
-                    <a href="">Forgot Password?</a>
-                </div>
-                <button type="submit">Login</button>
-                
-            </form>
-            <h4>Or</h4>
-            <a href="#createtab">Create an Account</a>
-        </div>
-        
-    </div>
-    <div id = "createtab">
-        <div class="login-form">
-            <h3 class="login-heading">Create Account</h3>
-            <form class="login">
-                <input type="text" id="username" name="username" required placeholder="Username">
-                <br>
-                <input type="password" id="password" name="password" required placeholder="Password">
-                <br>
-                <input type="password" id="passwordcheck" name="passwordcheck" required placeholder="Confirm Password">
-                <button type="submit">Create</button>
-                
-            </form>
-            <h4>Or</h4>
-            <button class="accCreate" onclick="createaccount()">Create an Account</button>
-        </div>
-
 </body>
 </html>

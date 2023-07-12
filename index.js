@@ -20,7 +20,15 @@ function scrolltoLogin() {
 function createaccount(){
   const create = document.getElementById("createtab");
   const login = document.getElementById("logintab");
-  
-  login.hidden = true;
-  create.hidden = false;
+
+  create.style.display = 'inline';
+  login.style.display = 'none';
+}
+
+function backaccount(){
+  const create = document.getElementById("createtab");
+  const login = document.getElementById("logintab");
+
+  create.style.display = 'none';
+  login.style.display = 'inline';
 }
