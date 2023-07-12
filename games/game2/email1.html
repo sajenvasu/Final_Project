@@ -1,0 +1,351 @@
+<html>
+<head>
+  <link href="https://fonts.cdnfonts.com/css/harlequinflf" rel="stylesheet">
+    
+</head>
+
+
+<body>
+
+  
+   <style>
+
+@import url('https://fonts.cdnfonts.com/css/harlequinflf');
+  
+  body{
+      background-image: url("images/office4blur.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+      
+
+    }
+
+    .rectangle {
+      width: 60%;
+      height: 100%;
+      margin: 0 auto;
+      background-color: rgb(11, 39, 48);
+      position: relative;
+      right: 5%;
+    }
+
+    .rectangle-heading {
+      font-family: 'HarlequinFLF', sans-serif; font-family: 'HarlequinExtraboldFLF', sans-serif;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 10%;
+      left: 2.5%;
+      width: 95%;
+      height: 87%;
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2px;
+    }
+    
+    .email-header {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .email-subject {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .email-body {
+      font-size: 17px;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .email-end {
+      font-size: 12px;
+      
+    }
+  
+    .dialog-container {
+      animation: fade-in 2s ease-out forwards;
+
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 38%;
+      right: 79%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 3;
+    }
+    
+    .dialog-box {
+      width: 230px;
+      padding: 15px;
+      background-color: rgb(11, 39, 48);
+      color: white;
+      border-radius: 50px;
+      position: relative;
+    }
+    
+    .dialog-box::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid rgb(11, 39, 48);
+    }
+    
+    .message {
+      animation: fade-in 2s ease-out forwards;
+      font-family: 'HarlequinFLF', sans-serif; font-family: 'HarlequinExtraboldFLF', sans-serif;
+      font-size: 19px;
+      text-align: center;
+    }
+
+
+    .overlay img {
+      align-self: flex-start;
+      padding: 10px;
+    }
+
+    @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    
+
+    .description1 {
+    position: absolute;
+    top: 1%;
+    left: 75%;
+    width: 310px;
+    height: 94%;
+    color: white;
+    background-color: rgb(11, 39, 48);
+    border: 5px black;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    z-index: 4;
+    font-family: 'HarlequinFLF', sans-serif; font-family: 'HarlequinExtraboldFLF', sans-serif;
+    font-size: 19px;
+  }
+  .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 5px;
+  }
+  
+  .checked {
+    background-color: green;
+    color: white;
+  }
+  .wrongchecked {
+    background-color: rgb(179, 0, 0);
+    color: white;
+  }
+  
+  .score {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .done-button {
+    position: fixed;
+    bottom: 3%;
+    left: 3%;
+    padding: 10px 20px;
+    background-color: #563e05;
+    color: white;
+    border: 2px white;
+    border-style: solid;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 150px;
+    height: 80px;
+    font-weight: bold;
+  }
+
+  .result-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background-color: #563e05;
+    color: white;
+    border-radius: 200px;
+    padding: 20px;
+    text-align: center;
+    border: 5px rgb(0, 0, 0);
+    border-style: solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .result-box p {
+    position: fixed;
+    top: 20%;
+    left: 30%;
+    margin: 0 0 20px;
+    font-size: 50px;
+  }
+
+  .result-box button {
+    position: fixed;
+    right: 32%;
+    top: 50%;
+    padding: 10px 20px;
+    background-color: #150e02;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'HarlequinFLF', sans-serif; font-family: 'HarlequinExtraboldFLF', sans-serif;
+    text-align: center;
+    width: 35%;
+    height: 20%;
+    
+  }
+
+  
+
+  </style>
+
+<script>
+  var descriptionBox;
+  var score = 0;
+
+function showDescription1(description, icon) {
+  if (!descriptionBox) {
+    descriptionBox = document.createElement('div');
+    descriptionBox.className = 'description1';
+    document.body.appendChild(descriptionBox);
+  }
+  descriptionBox.innerHTML += description + '<br><br>';
+
+  var iconElement = icon.querySelector('.icon');
+  iconElement.classList.toggle('checked');
+  score++;
+  icon.onclick = null;
+
+  updateScore();
+}
+
+
+function showDescription2(description, icon) {
+  if (!descriptionBox) {
+    descriptionBox = document.createElement('div');
+    descriptionBox.className = 'description1';
+    document.body.appendChild(descriptionBox);
+  }
+  descriptionBox.innerHTML += description + '<br><br>';
+
+  var iconElement = icon.querySelector('.icon');
+  iconElement.classList.toggle('wrongchecked');
+  score--;
+  icon.onclick = null;
+
+  updateScore();
+}
+
+function updateScore() {
+    var scoreElement = document.getElementById('score');
+    scoreElement.textContent = 'Score: ' + score;
+  }
+
+  function showResult() {
+    var resultBox = document.createElement('div');
+    resultBox.className = 'result-box';
+
+    var scoreText = document.createElement('p');
+    scoreText.textContent = 'Score: ' + score +'/5';
+
+    var nextButton = document.createElement('button');
+    nextButton.textContent = 'Next';
+    nextButton.addEventListener('click', function() {
+      
+      window.location.href = 'email2.html';
+    });
+
+    resultBox.appendChild(scoreText);
+    resultBox.appendChild(nextButton);
+    document.body.appendChild(resultBox);
+
+    
+  }
+
+
+</script>
+
+<div class="score" id="score">Score: 0</div>
+
+<div class="rectangle">
+  <h2 class="rectangle-heading">What is wrong with this email?</h2>
+  <div class="overlay">
+    <img src="images/cra.png" alt="Image" width="170" height="90">
+    <div class="email-header">From: Canada Revenue Agency</div>
+    <div class="email-header">To: CONSERVATIVE MEMBERS /DEPUTES CONSERVATEURS</div>
+    <div class="email-subject">YOUR TAX CALCULATION IS READY</div>
+    <div class="email-body">
+      <p onclick="showDescription1('1. Any financial agency or banks will address you by your real name and not a generic salutation. This is very likely a scam.',this)" >  
+        Dear taxpayer, <span class="icon">1</span> 
+      </p>
+      <p onclick="showDescription2('2. Hmm, there is nothing suspicious about this line.', this)">This is an automated email, please do not reply. <span class="icon">2</span> </p>
+      <p>The review of your income tax liability shows you have overpaid tax for the year.</p>
+      <p onclick="showDescription1('3. Often times money is used as a lure to hook you. Scammers tend to capitalize certain words to temp you.', this)">Our calculation shows that you are eligible to receive a tax refund of $788.00 ready to CLAIM NOW. <span class="icon">3</span> </p>
+      <p>Due to the high volume of tax refund payments you must complete the online application, the telephone help line is very busy at the moment and may be unable to assist you. We therefore urge applicants to complete the online form.</p>
+      <p onclick="showDescription1('4. Never click on a suspicious link. Hover over the link to see if it is legit.  Authorized companies do not force you to their website. Login to your account NOT using this link to confirm your status.', this)">Please click to claim now. <span class="icon">4</span> </p>
+      Sincerely, <br>
+      <span onclick="showDescription1('5. Scam emails can be recognized by bad grammar and spelling mistakes. Legitimate organization emails are well written.', this)">Canada Revenue Agncy <span class="icon">5</span> </span> <br>
+      All Rights Reserved <br>
+      <hr>
+      <div class="email-end">
+      <p onclick="showDescription1('6. Scammers like to explain why their emails may have ended up in your junk or spam folder. Do not fall for it.', this)">IMPORTANT NOTE: If you receive this message in spam or junk it is a result of your network provider. Please move this message to your inbox and follow the instructions above. <span class="icon">6</span> </p>
+      </div>
+    </div>
+  </div>
+</div>
+       
+<div class="dialog-container">
+  <div class="dialog-box">
+    <p class="message">Select all the text that is suspicious.</p>
+  </div>
+</div>
+
+
+<button class="done-button" onclick="showResult()">Done</button>
+
+</body>
+</html>
+

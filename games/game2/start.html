@@ -1,0 +1,118 @@
+<html>
+<head>
+
+  <link href="https://fonts.cdnfonts.com/css/harlequinflf" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+  
+   <style>
+
+@import url('https://fonts.cdnfonts.com/css/harlequinflf');
+
+    body{
+      background-image: url("images/tran-bubbles.gif"), url("images/startback.png");
+      background-repeat: no-repeat;
+      background-size: cover, cover;
+      background-attachment: fixed, fixed;
+      background-position: center center, center center;
+      
+      text-align: center;
+      font-family: 'HarlequinFLF', sans-serif; font-family: 'HarlequinExtraboldFLF', sans-serif;
+    }
+
+
+    
+    h1 {
+            font-size: 140px;
+            color: #311d03;
+            position: relative;
+            left: -100%;
+            animation: slide-in-text 3s ease-out forwards;
+
+            
+          /*  -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(255, 255, 255);     
+            font-weight: 1000;   */  
+        }
+
+        h2 {
+            font-size: 80px;
+            color: #7b5c2f;
+            position: relative;
+            left: -100%;
+            animation: slide-in-text 3s ease-out forwards;
+
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: rgb(48, 31, 13);     
+        }
+
+        .title {
+            position: relative;
+            margin-top: 250px;
+            animation: slide-in 2.5s ease-out forwards;
+            animation-delay: 3s;
+        }
+        
+        .start-link {
+            position: relative;
+            font-size: 70px;
+            color: #18514b;
+            text-decoration: none;
+            margin-top: 55px;
+            opacity: 0;
+            animation: fade-in 1s ease-out forwards;
+            animation-delay: 4s;
+            cursor: pointer;
+
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(255, 255, 255); 
+        }
+    
+        
+
+        @keyframes slide-in {
+            100% { margin-top: 100px; }
+        }
+        
+        @keyframes slide-in-text {
+            0% { left: -50%; }
+            100% { left: 0; }
+        }
+        
+        @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        
+        
+
+  </style>
+
+<audio autoplay loop>
+  <source src="sounds/bubbless2.wav" type="audio/wav">
+  
+</audio>
+
+<br>
+<div class="title"></div>
+  <h1>  Phish Hunt</h1>
+  <h2>Learn to spot the scams</h2>
+</div>
+
+<br>
+<br>
+
+
+<a class="start-link" href="home.html">Start</a>
+
+      
+        
+       
+</body>
+</html>
+

@@ -1,0 +1,197 @@
+<html>
+<head>
+
+    
+</head>
+
+
+<body>
+
+  
+   <style>
+  
+    body{
+      background-image: url("images/sam.PNG"), url("images/office4.jpg");
+      background-repeat: no-repeat;
+      background-size: 50%, cover;
+      background-attachment: absolute, fixed;
+      background-position: bottom right, center center;
+      
+
+    }
+     
+    .dialog-container {
+      animation: fade-in 1.5s ease-out forwards;
+
+      position: absolute;
+      right: 37%;
+      bottom: 30%;
+      width: 35%;
+      height: 33%;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: rgba(241, 228, 206, 0.8);
+      
+      border-radius: 60px;
+      border-right: 8px;
+      border-bottom: 8px;
+      border-style: solid;
+      border-color: #341e04;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      
+      
+    }
+
+    
+    .dialog-container:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -60px;
+      transform: translateY(-50%); /* arrow position*/
+      border-width: 30px;
+      border-style: solid;
+      border-color: transparent transparent transparent #341e04; /* arrow */
+    }
+    
+    .dialog-container h2 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+    
+    .dialog-container p {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    
+    .dialog-container button {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      padding: 10px 25px;
+      background-color: #341e04;
+      color: #fff;
+      
+      border: none;
+      border-radius: 10px;
+      
+      cursor: pointer;
+    }
+    
+    .dialog-container button:hover {
+      background-color: #64451e;
+    }
+    
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fade-in {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+
+     
+
+  </style>
+
+
+
+<script>
+  var currentChar1 = 0;
+  var currentChar2 = 0;
+  var currentChar3 = 0;
+  var text1 = "";
+  var text2 = "";
+  var text3 = "";
+
+  function typeText(containerId, message) {
+    var container = document.getElementById(containerId);
+    container.innerHTML = "";
+    var text = "";
+    var currentChar = 0;
+
+    if (containerId === "dialog1-message") {
+      text1 = message;
+      text = text1;
+      currentChar = currentChar1;
+    } else if (containerId === "dialog2-message") {
+      text2 = message;
+      text = text2;
+      currentChar = currentChar2;
+    } else if (containerId === "dialog3-message") {
+      text3 = message;
+      text = text3;
+      currentChar = currentChar3;
+    }
+
+    var typing = setInterval(function() {
+      if (currentChar < text.length) {
+        container.innerHTML += text.charAt(currentChar);
+        currentChar++;
+
+        if (containerId === "dialog1-message") {
+          currentChar1 = currentChar;
+        } else if (containerId === "dialog2-message") {
+          currentChar2 = currentChar;
+        } else if (containerId === "dialog3-message") {
+          currentChar3 = currentChar;
+        }
+      } else {
+        clearInterval(typing);
+      }
+    }, 50);
+  }
+
+  function showDialog() {
+    var dialog1 = document.getElementById("dialog1");
+    var dialog2 = document.getElementById("dialog2");
+    var dialog3 = document.getElementById("dialog3");
+    
+    if (!dialog1.classList.contains("hidden")) {
+      dialog1.classList.add("hidden");
+      dialog2.classList.remove("hidden");
+      typeText("dialog2-message", "The most common phishing attacks are sent by email. A phishing email is a type of cyberattack that uses deception to obtain sensitive information from people and organizations. Victims are tricked into disclosing personal information, the attackers then use it to inpersonate you and apply for credit cards or loans, open bank accounts, and commit other fraudulent acts.");
+    } else if (!dialog2.classList.contains("hidden")) {
+      dialog2.classList.add("hidden");
+      dialog3.classList.remove("hidden");
+      typeText("dialog3-message", "Now that you know what a phishing email is, let us look at some examples to see if you can detect the scams from the most simplest of details.");
+    }else if (!dialog3.classList.contains("hidden")) {
+        // Redirect to the next HTML page
+        window.location.href = "email1.html";
+      }
+  }
+</script>
+    
+
+   <!-- -->
+
+   <div class="dialog-container" id="dialog1">
+    <h2>Hi, I'm Sam!</h2>
+    <p id="dialog1-message"></p>
+    <button onclick="showDialog()">Next</button>
+  </div>
+  
+  <div class="dialog-container hidden" id="dialog2">
+    <h2>What is a Phishing Email?</h2>
+    <p id="dialog2-message"></p>
+    <button onclick="showDialog()">Next</button>
+  </div>
+  
+  <div class="dialog-container hidden" id="dialog3">
+    <h2>Lets Get Started!</h2>
+    <p id="dialog3-message"></p>
+    <button onclick="showDialog()">Ready!</button>
+  </div>
+    
+<script>
+  typeText("dialog1-message", "Welcome to my study area. In this current world, there are numerous ways to fall for a phishing scam. Today I will help you learn how to detect, and avoid these scams with some real life examples.");
+</script>
+      
+
+
+  
+</body>
+</html>
+
