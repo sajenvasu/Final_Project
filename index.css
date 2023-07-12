@@ -299,6 +299,19 @@ button[type="submit"]{
     font-family: 'Alatsi', sans-serif;                                                
 }
 
+
+.accCreate{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #326fa8;
+    font-family: 'Alatsi', sans-serif;  
+}
+
 .rememberme{
     margin-left: 170px;
 }

@@ -16,3 +16,11 @@ function scrolltoLogin() {
     });
   
 }
+
+function createaccount(){
+  const create = document.getElementById("createtab");
+  const login = document.getElementById("logintab");
+  
+  login.hidden = true;
+  create.hidden = false;
+}
