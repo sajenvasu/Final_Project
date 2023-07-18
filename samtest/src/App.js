@@ -14,7 +14,7 @@ function App() {
             <h1>CYBERSECURITY <br></br> GAMES </h1>
             <div class="menu">
                 <button class="headin" onclick="scrolltoAbout()"><h2 class="headings">About</h2></button>
-                <a href="login.html"><button class="headin"><h2 class="headings">Login</h2></button></a>
+                <button class="headin"><h2 class="headings">Login</h2></button>
                 <button class="headin" onclick="scrolltoGames()"><h2 class="headings">Games</h2></button>  
             </div>
     
