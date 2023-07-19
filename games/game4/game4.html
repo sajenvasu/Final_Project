@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game 4</title>
 
+    <script src="pixi/pixi.min.js"></script>
+    <script>
+        let app;
+        window.onload = function(){
+            app = new PIXI.Application(
+                {
+                    width: 1500,
+                    height: 600,
+                    backgroundColor: 0x3e52c2
+                }
+            );
+
+            document.body.appendChild(app.view);
+
+            player = new PIXI.Sprite.from("https://static.wikia.nocookie.net/gensin-impact/images/f/fd/Xiao_Icon.png/revision/latest/scale-to-width/360?cb=20210214012045");
+            player.x = app.view.width/2.5;
+            player.y = app.view.height/5;
+
+            app.stage.addChild(player);
+
+            app.stage.interactive = true;
+            app.stage.on("pointermove", movePlayer);
+        }
+        
+        function movePlayer(e){
+                let pos = e.data.global;
+
+                player.x = pos.x;
+                player.y = pos.y;
+            }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
