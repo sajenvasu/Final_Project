@@ -8,6 +8,11 @@ import Game1Home from './game1/game1home';
 import Start from './game1/start';
 import Checker from './game1/pwd-checker';
 
+import Game2Start from './game2/game2start';
+import Game2Home from './game2/game2home';
+import Email1 from './game2/email1';
+import Email2 from './game2/email2';
+import Email3 from './game2/email3';
 
 function App() {
     return (
@@ -21,6 +26,12 @@ function App() {
         <Route path="/game1home" element={<Game1Home />} />
         <Route path="/pwd-checker" element={<Checker />} />
         </Routes>
+
+        <Route path="/game2start" element={<Game2Start />} />
+        <Route path="/game2home" element={<Game2Home />} />
+        <Route path="/email1" element={<Email1 />} />
+        <Route path="/email2" element={<Email2 />} />
+        <Route path="/email3" element={<Email3 />} />
         </div>
     );
 }

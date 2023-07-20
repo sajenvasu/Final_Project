@@ -1,0 +1,162 @@
+@import url('https://fonts.cdnfonts.com/css/harlequinflf');
+
+.background {
+  background-image: url("images/tran-bubbles.gif"), url("images/startback.png");
+  background-repeat: no-repeat;
+  background-size: cover, cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-attachment: fixed, fixed;
+  background-position: center center, center center;
+  text-align: center;
+  font-family: 'HarlequinFLF', sans-serif;
+  font-family: 'HarlequinExtraboldFLF', sans-serif;
+}
+
+h1 {
+  font-size: 140px;
+  color: #311d03;
+  position: relative;
+  left: -100%;
+  animation: slide-in-text 3s ease-out forwards;
+}
+
+h2 {
+  font-size: 80px;
+  color: #7b5c2f;
+  position: relative;
+  left: -100%;
+  animation: slide-in-text 3s ease-out forwards;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgb(48, 31, 13);
+}
+
+.title {
+  position: relative;
+  margin-top: 250px;
+  animation: slide-in 2.5s ease-out forwards;
+  animation-delay: 3s;
+}
+
+.start-link {
+  position: relative;
+  font-size: 70px;
+  color: #18514b;
+  text-decoration: none;
+  margin-top: 55px;
+  opacity: 0;
+  animation: fade-in 1s ease-out forwards;
+  animation-delay: 4s;
+  cursor: pointer;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+@keyframes slide-in {
+  100% {
+    margin-top: 100px;
+  }
+}
+
+@keyframes slide-in-text {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.backgroundhome {
+  background-image: url("images/sam.PNG"), url("images/office4.jpg");
+  background-repeat: no-repeat;
+  background-size: 50%, cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-attachment: absolute, fixed;
+  background-position: bottom right, center center;
+}
+
+.dialog-container {
+  animation: fade-on 1.5s ease-out forwards;
+  position: absolute;
+  right: 37%;
+  bottom: 30%;
+  width: 35%;
+  height: 33%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(241, 228, 206);
+  border-radius: 60px;
+  border-right: 8px;
+  border-bottom: 8px;
+  border-style: solid;
+  border-color: #341e04;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-container:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%); /* arrow position*/
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent transparent transparent #341e04; /* arrow */
+}
+
+.dialog-container h6 {
+  margin-top: 0;
+  margin-bottom: -5px;
+  font-size: 24px;
+}
+
+.dialog-container p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.dialog-container button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 25px;
+  background-color: #341e04;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dialog-container button:hover {
+  background-color: #64451e;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fade-on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
