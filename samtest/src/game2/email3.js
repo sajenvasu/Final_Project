@@ -55,7 +55,7 @@ const Email1 = () => {
         {resultShown ? (
           <div className="result-box">
             <p>Score: {score}/5</p> 
-            <Link to="/game2start">
+            <Link to="../Home">
             <button>Next</button>
             </Link>
           </div>

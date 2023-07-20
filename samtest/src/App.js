@@ -18,20 +18,23 @@ function App() {
     return (
         <div className="App">
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Home" element={<Home />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Create" element={<Create />} />
 
             <Route path="/start" element={<Start />} />
         <Route path="/game1home" element={<Game1Home />} />
         <Route path="/pwd-checker" element={<Checker />} />
-        </Routes>
 
         <Route path="/game2start" element={<Game2Start />} />
         <Route path="/game2home" element={<Game2Home />} />
         <Route path="/email1" element={<Email1 />} />
         <Route path="/email2" element={<Email2 />} />
         <Route path="/email3" element={<Email3 />} />
+
+        </Routes>
+
+        
         </div>
     );
 }

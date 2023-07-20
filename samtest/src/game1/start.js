@@ -42,7 +42,7 @@ function Start() {
           Start Game    
         </Link>
      
-        <h3>or</h3>
+        <div className="h3"> or</div>
 
         <Link className="start-link" to="/pwd-checker">
           Check Password Strength

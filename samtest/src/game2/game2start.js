@@ -27,13 +27,13 @@ const Game2Start = () => {
   return (
     <>
 <div className="background">
-      <div className="title">
-        <h1>Phish Hunt</h1>
-        <h2>Learn to spot the scams</h2>
+      <div className="title-phish">
+      <div className="hed1">Phish Hunt</div>
+      <div className="hed2">Learn to spot the scams</div>
         <audio ref={audioRef} src={startSound} loop />
       </div>
 
-      <Link className="start-link" to="/game2home">
+      <Link className="start-link-phish" to="/game2home">
         Start
       </Link>
       </div>

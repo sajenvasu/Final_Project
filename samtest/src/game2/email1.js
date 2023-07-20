@@ -72,22 +72,27 @@ const Email1 = () => {
             <div className="email-header">To: CONSERVATIVE MEMBERS /DEPUTES CONSERVATEURS</div>
             <div className="email-subject">YOUR TAX CALCULATION IS READY</div>
             <div className="email-body">
+
             <p onClick={() => showDescription('1. Any financial agency or banks will address you by your real name and not a generic salutation. This is very likely a scam.', 1)}>
               Dear taxpayer, <span className={`icon ${clickedLines.includes(1) ? 'checked' : ''}`}>1</span>
             </p>
+
             <p onClick={() => showDescription2('2. Hmm, there is nothing suspicious about this line.', 2)}>
               This is an automated email, please do not reply. <span className={`icon ${clickedLines.includes(2) ? 'wrongchecked' : ''}`}>2</span>
             </p>
-            <p>The review of your income tax liability shows you have overpaid tax for the year.</p>
+
+            The review of your income tax liability shows you have overpaid tax for the year.
+
             <p onClick={() => showDescription('3. Often times money is used as a lure to hook you. Scammers tend to capitalize certain words to tempt you.', 3)}>
               Our calculation shows that you are eligible to receive a tax refund of $788.00 ready to CLAIM NOW.{' '}
               <span className={`icon ${clickedLines.includes(3) ? 'checked' : ''}`}>3</span>
             </p>
-            <p>
+
+            
               Due to the high volume of tax refund payments, you must complete the online application, the telephone
               help line is very busy at the moment and may be unable to assist you. We, therefore, urge applicants to
               complete the online form.
-            </p>
+            
             <p onClick={() => showDescription('4. Never click on a suspicious link. Hover over the link to see if it is legit.  Authorized companies do not force you to their website. Login to your account NOT using this link to confirm your status.', 4)}>
               Please click to claim now. <span className={`icon ${clickedLines.includes(4) ? 'checked' : ''}`}>4</span>
             </p>
@@ -99,11 +104,11 @@ const Email1 = () => {
             All Rights Reserved <br />
             <hr />
             <div className="email-end">
-              <p onClick={() => showDescription('6. Scammers like to explain why their emails may have ended up in your junk or spam folder. Do not fall for it.', 6)}>
+            <span onClick={() => showDescription('6. Scammers like to explain why their emails may have ended up in your junk or spam folder. Do not fall for it.', 6)}>
                 IMPORTANT NOTE: If you receive this message in spam or junk, it is a result of your network provider.
                 Please move this message to your inbox and follow the instructions above.{' '}
                 <span className={`icon ${clickedLines.includes(6) ? 'checked' : ''}`}>6</span>
-              </p>
+                </span>
               </div>
             </div>
           </div>
@@ -111,7 +116,7 @@ const Email1 = () => {
         </div>
   
         <div className="dialog-container-email">
-          <div className="dialog-box">
+          <div className="dialog-box1">
             <p className="message">Select all the text that is suspicious.</p>
           </div>
         </div>

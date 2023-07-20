@@ -268,11 +268,6 @@ h4{
     transition: transform 0.5s ease;
 }
 
-p{
-    animation-name: leftright;
-    animation-duration: 2s;
-    transition: transform 0.5s ease;
-}
 
 .game1{
     padding-left: 13px;
