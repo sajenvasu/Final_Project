@@ -25,7 +25,7 @@ function Login(){
                 <h4>Or</h4>
                 <Link to= "/Create"><button class="createbutton">Create an Account</button></Link>
                 <br></br>
-                <Link to= "/"><p style={{marginTop: '20px'}}>Back to Home</p></Link>
+                <Link to= "/Home"><p style={{marginTop: '20px'}}>Back to Home</p></Link>
             </div>
             
         </div>
