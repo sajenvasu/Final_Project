@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import startSound from './sounds/checker.mp3';
 import './password-meter.css';
 import { Link } from 'react-router-dom';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 
 function Checker() {
 
@@ -34,6 +35,18 @@ const [isVisible, setIsVisible] = useState(false);
   };
 
   //pwd meter:
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  // Function to toggle the password visibility
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
     return (
     
@@ -65,6 +78,35 @@ const [isVisible, setIsVisible] = useState(false);
           Do not make it easy to guess. </div>
 
           )}
+
+        <div className="meterbox">
+          <p>Password Strength Meter</p>
+          <div style={{ position: 'relative' }}>
+          <input
+            type={showPassword ? 'text' : 'password'}
+            onChange={handleChange}
+            placeholder="Enter Password"
+          />
+          <span
+            onClick={togglePasswordVisibility}
+            style={{
+              position: 'absolute',
+              top: '70%',
+              right: '7%',
+              transform: 'translateY(-50%)',
+              cursor: 'pointer',
+              fontSize: '30px',
+            }}
+          >
+            {showPassword ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
+          </span>
+          
+        </div>
+
+     
+
+
+        </div>
       </div>
 
 
