@@ -115,8 +115,7 @@ a{
     }
 }
 
-
-.bg {
+.App{
     background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
     background-size: cover;
     height: 100%;
@@ -126,6 +125,7 @@ a{
     left: 0;
     z-index: -3;
 }
+
 .bg:before {
     content: "";
     width: 100%;
@@ -223,13 +223,9 @@ a{
 
 @keyframes slide {
     0%{ 
-        visibility: hidden;
-        opacity: 0;
-        transform: translateX(450px);
+        transform: translateX(950px);
     }
     100%{
-        visibility: visible;
-        opacity: 1;
         transform: translateX(0px);
     }
 }
