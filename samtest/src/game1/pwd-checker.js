@@ -48,6 +48,24 @@ const [isVisible, setIsVisible] = useState(false);
     setShowPassword(!showPassword);
   };
 
+  //progress bar
+  const calculatePasswordStrength = (password) => {
+    const length = password.length;
+    const hasLowercase = /[a-z]/.test(password);
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
+    const hasMinLength = length >= 8; // Check for minimum length (8 characters)
+  
+    const conditionsMet =
+      hasLowercase + hasUppercase + hasNumber + hasSpecialChar + hasMinLength;
+    const strength = conditionsMet / 5;
+  
+    return { strength, conditionsMet };
+  };
+  const { strength, conditionsMet } = calculatePasswordStrength(inputValue);
+  const passwordStrength = strength * 100;
+
     return (
     
 
@@ -103,10 +121,30 @@ const [isVisible, setIsVisible] = useState(false);
           
         </div>
 
-     
-
-
+        <div className="progress-bar-container">
+          <div
+            className={`progress-bar ${
+              conditionsMet === 0
+                ? 'progress-bar-red'
+                : conditionsMet === 1
+                ? 'progress-bar-red'
+                : conditionsMet === 2
+                ? 'progress-bar-orange'
+                : conditionsMet === 3
+                ? 'progress-bar-orange'
+                : conditionsMet === 4
+                ? 'progress-bar-yellow'
+                : conditionsMet === 5
+                ? 'progress-bar-green'
+                : 'progress-bar-green'
+            }`}
+            style={{
+              width: `${passwordStrength}%`,
+            }}
+          />
         </div>
+      </div>
+        
       </div>
 
 
