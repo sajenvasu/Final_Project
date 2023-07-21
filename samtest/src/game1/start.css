@@ -1,9 +1,14 @@
 @import url('https://fonts.cdnfonts.com/css/deltha');
 
-body {
+.startbody {
   background-image: url("images/pass-start.gif");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-attachment: fixed;
   background-position: center center;
   text-align: center;

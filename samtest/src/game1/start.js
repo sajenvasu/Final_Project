@@ -29,7 +29,7 @@ function Start() {
   
 
   return (
-    <div className="start">
+    <div className="startbody">
       <div className="container">
         <div className="title"> 
         Secure Meter

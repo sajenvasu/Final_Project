@@ -4,7 +4,7 @@ import CanvasAnimation from "./CanvasAnimation";
 import image from './images/sajen.PNG';
 import './DialogBox.css';
 
-function Home() {
+function Game1Home() {
 
   return (
     
@@ -26,4 +26,4 @@ function Home() {
 
 
 
-export default Home;
+export default Game1Home;
