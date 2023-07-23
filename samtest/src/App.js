@@ -7,6 +7,8 @@ import { Routes, Route } from 'react-router-dom';
 import Game1Home from './game1/game1home';
 import Start from './game1/start';
 import Checker from './game1/pwd-checker';
+import Lvl2 from './game1/lvl2';
+import Lvl3 from './game1/lvl3';
 
 import Game2Start from './game2/game2start';
 import Game2Home from './game2/game2home';
@@ -25,6 +27,8 @@ function App() {
             <Route path="/start" element={<Start />} />
         <Route path="/game1home" element={<Game1Home />} />
         <Route path="/pwd-checker" element={<Checker />} />
+        <Route path="/lvl2" element={<Lvl2 />} />
+        <Route path="/lvl3" element={<Lvl3 />} />
 
         <Route path="/game2start" element={<Game2Start />} />
         <Route path="/game2home" element={<Game2Home />} />

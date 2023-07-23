@@ -7,7 +7,7 @@ import './password-meter.css';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
-function Game1Home() {
+function Lvl2() {
 
   
 
@@ -39,7 +39,7 @@ const [dialogState, setDialogState] = useState(1);
 
 const text1 = "Can you help me create a password for my Disney Plus account. Keep it simple so it's easy to share it with my friends and family."; 
 const text2 = " Click the hint button on the bottom left to see other requirements.";
-const text3 = "Thank you! This will work just fine. Remember this is not a very stong password. Click on enter to go to the next level.";
+const text3 = "Great Work! You've met all the requirements. Click on enter to go to the next level.";
 
 //progress bar
 const calculatePasswordStrength = (password) => {
@@ -100,7 +100,7 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
               
             </div>
             <img src={image} alt="sajenpic" style={{ position: 'absolute', bottom: 0, left: -90, width: '600px', height: 'auto', zIndex:'10' }} />
-            <div className="level"> Level 1</div>
+            <div className="level"> Level 2</div>
 
             
 
@@ -151,7 +151,7 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
           />
         </div>
         {conditionsMet === 4 && (
-          <Link to="/lvl2">
+          <Link to="/lvl3">
         <button>Enter</button>
         </Link>
 
@@ -185,4 +185,4 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
 
 
 
-export default Game1Home;
+export default Lvl2;

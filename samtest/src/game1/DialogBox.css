@@ -6,24 +6,41 @@
 
 
 .dialog-box {
-  position: fixed;
-  top: 70%;
+  position: absolute;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: black;
-  width: 500px;
+  width: 400px;
   height: auto;
-  padding: 5px 5px;
-  border-radius: 10px;
+  padding: 10px 25px;
+  border-radius: 5px;
   border-style: solid;
   border-color: rgb(107, 143, 162);
   border-width: 1px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 174, 255, 0.8);
   animation: delay 3s forwards;
 }
+.dialog-box button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  bottom: 5%;
+  left: 90%;
+  padding: 10px 10px;
+  background-color: #21565e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
 
 .dialog-content {
-  padding: 5px;
+  
   color: rgb(255, 255, 255);;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
@@ -42,9 +59,10 @@
   border-bottom: 25px solid transparent;
   border-right: 25px solid rgb(107, 143, 162);
   animation: delay 3s forwards;
+  
 }
 
-.lvl1{
+.level{
   position: absolute;
   top: 2%;
   left: 2%;
@@ -65,12 +83,12 @@
   border-color: rgb(15, 95, 1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(85, 255, 0, 0.4);
 
-  padding: 20px 20px;
+  padding: 10px 20px;
   color: white;
   font-size: 20px;
   text-align: center;
 
-  height: 25%;
+  height: 30%;
   width: 99%;
   
 }
@@ -120,7 +138,7 @@
   font-family: 'Courier New', Courier, monospace;
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 88%;
+  left: 85%;
   top: 70%;
   background-color: rgba(42, 42, 42, 0.8);
   padding: 20px 20px;
@@ -128,6 +146,19 @@
   cursor: pointer;
   font-size: 20px;
   text-align: left;
-  width: 15%;
+  width: 20%;
   height: 23%;
+}
+
+.progress-bar-game {
+  position: absolute;
+  top: 60%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  height: 5px;
+  background-color: #ababab;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 5px;
 }
