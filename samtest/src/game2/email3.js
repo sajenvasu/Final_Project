@@ -62,7 +62,7 @@ const Email1 = () => {
         ) : null}
   
         <div className="score" id="score">
-          Score: {score}
+          Score: {score}/5
         </div>
         <div className="backgroundemail1">
         <div className="rectangle3">
@@ -75,7 +75,7 @@ const Email1 = () => {
             From: finance-noreply@uwindsor.ca <span className={`icon ${clickedLines.includes(1) ? 'wrongchecked' : ''}`}>1</span>
             </span></div> 
             
-            <div className="email-header"><span onClick={() => showDescription('2. Scammers like to BCC the recipient&rsquo;s emails when they are sending something to a long list of people. Make sure something as important as this is addressed to you alone.', 2)}>
+            <div className="email-header"><span onClick={() => showDescription('2. Scammers like to BCC the recipients emails when they are sending something to a long list of people. Make sure something as important as this is addressed to you alone.', 2)}>
             To: <span className={`icon ${clickedLines.includes(2) ? 'checked' : ''}`}>2</span>
             </span></div>
 
@@ -88,11 +88,11 @@ const Email1 = () => {
              </p>
              <p>It has come to our attention that your tuition payment has not been completed. </p>
 
-            <p onClick={() => showDescription('3. Do not take an email&rsquo;s word. Go to check the website yourself to make sure. The statement is likely false.', 3)}>
+            <p onClick={() => showDescription('3. Do not trust this email. Go to check the website yourself to make sure. The statement is likely false.', 3)}>
             Due to the UWindsor Student website not being in operation for the next few days, we advise you to cantact us immidiatly through our financial helpline indicated below. <span className={`icon ${clickedLines.includes(3) ? 'checked' : ''}`}>3</span>
             </p>
             
-            <p onClick={() => showDescription('4. Whenever you are given a phone number, make sure it is official. A scammer will pretend to be the school&rsquo;s financial representative on the phone, ready to get more information from you.', 4)}>
+            <p onClick={() => showDescription('4. Whenever you are given a phone number, make sure it is official. A scammer will pretend to be a school financial representative on the phone, ready to get more information from you.', 4)}>
             <u>509-234 5676</u> <span className={`icon ${clickedLines.includes(4) ? 'checked' : ''}`}>4</span>
             </p>
 

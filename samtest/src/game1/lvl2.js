@@ -33,25 +33,23 @@ const togglePasswordVisibility = () => {
 //dialog next but
 const [dialogState, setDialogState] = useState(1);
 
-  const showDialog = () => {
-    setDialogState((prevState) => prevState + 1);
-  };
+  //score
+  const [score, setScore] = useState(0);
 
-const text1 = "Can you help me create a password for my Disney Plus account. Keep it simple so it's easy to share it with my friends and family."; 
-const text2 = " Click the hint button on the bottom left to see other requirements.";
-const text3 = "Great Work! You've met all the requirements. Click on enter to go to the next level.";
+const text1 = "Can you help me create an even stronger password. Click the hint button on the bottom left to see other requirements."; 
+const text2 = "Good job! You have met all the requirements. Press enter to go to the next level.";
 
 //progress bar
 const calculatePasswordStrength = (password) => {
-  const length = password.length;
   const hasLowercase = /[a-z]/.test(password);
   const hasUppercase = /[A-Z]/.test(password);
   const hasNumber = /\d/.test(password);
   const hasWord = /Akili/i.test(password); 
+  const hasMinLength = password.length >= 8;
 
   const conditionsMet =
-    hasLowercase + hasUppercase + hasNumber + (hasWord ? 1 : 0);
-  const strength = conditionsMet / 4;
+    hasLowercase + hasUppercase + hasNumber + hasMinLength + !(hasWord ? 1 : 0);
+  const strength = conditionsMet / 5;
 
   return { strength, conditionsMet };
 };
@@ -63,8 +61,9 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
 
   useEffect(() => {
     const { conditionsMet } = calculatePasswordStrength(inputValue);
-    setAllConditionsMet(conditionsMet === 4);
-    if (conditionsMet === 4) {
+    setAllConditionsMet(conditionsMet === 5);
+    setScore((prevScore) => 15 + conditionsMet * 5);
+    if (conditionsMet === 5) {
       setDialogState(3);
     }
   }, [inputValue]);
@@ -74,26 +73,23 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
     
           <div className="home">
             <CanvasAnimation />
+
+            <div className="game1score">
+            Score: {score}
+            </div>
             
               <div className="dialog-content">
-              <div className={`dialog-box ${dialogState === 1 ? 'visible' : 'hidden'}`} style={{ opacity: dialogState === 1 ? 1 : 0 }}>
-        <p>Hi, I'm Sajen!</p>
-        
-        <p id="dialog1">{text1}</p>
-        <p></p>
-        <button onClick={showDialog}>Next</button>
-        <div className="arrow-left"></div>
-      </div>
+              
 
-      <div className={`dialog-box ${dialogState === 2 ? 'visible' : 'hidden'}`}>
-      <p>Use my pet's name: <b>Akili</b>. It is easy to remember and share.</p>
-        <p id="dialog2">{text2}</p>
+      <div className={`dialog-box ${dialogState === 1 ? 'visible' : 'hidden'}`}>
+      <p>It's me again!</p>
+        <p id="dialog2">{text1}</p>
         <div className="arrow-left"></div>
       </div>
 
       {allConditionsMet && (
-          <div className={`dialog-box ${dialogState === 3 ? 'visible' : 'hidden'}`}>
-            <p>{text3}</p>
+          <div className= "dialog-box">
+            <p>{text2}</p>
             <div className="arrow-left"></div>
           </div>
         )}
@@ -133,14 +129,16 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
           <div
             className={`progress-bar ${
               conditionsMet === 0
-                ? 'progress-bar-red'
+                ? 'progress-bar-trans'
                 : conditionsMet === 1
-                ? 'progress-bar-red'
+                ? 'progress-bar-trans'
                 : conditionsMet === 2
-                ? 'progress-bar-yellow'
+                ? 'progress-bar-red'
                 : conditionsMet === 3
-                ? 'progress-bar-yellow'
+                ? 'progress-bar-orange'
                 : conditionsMet === 4
+                ? 'progress-bar-yellow'
+                : conditionsMet === 5
                 ? 'progress-bar-green'
                 : 'progress-bar-green'
                 
@@ -150,7 +148,7 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
             }}
           />
         </div>
-        {conditionsMet === 4 && (
+        {conditionsMet === 5 && (
           <Link to="/lvl3">
         <button>Enter</button>
         </Link>
@@ -169,11 +167,12 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
           In your password, use: 
 
           <ol>
-          <li>The word: 'Akili'</li>
-          <li>Capital leters</li>
+          <li>Lowercase letters</li>
+          <li>Capital letters</li>
           <li>Numbers</li>
+          <li>At least 8 characters long</li>
           </ol>
-          
+          Do not use previous passwords.
            </div>
 
           )}

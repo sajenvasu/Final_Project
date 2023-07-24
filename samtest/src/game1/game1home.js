@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 
 function Game1Home() {
 
-  
-
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleInfoBox = () => {
@@ -37,13 +35,15 @@ const [dialogState, setDialogState] = useState(1);
     setDialogState((prevState) => prevState + 1);
   };
 
+  //score
+  const [score, setScore] = useState(0);
+
 const text1 = "Can you help me create a password for my Disney Plus account. Keep it simple so it's easy to share it with my friends and family."; 
 const text2 = " Click the hint button on the bottom left to see other requirements.";
-const text3 = "Thank you! This will work just fine. Remember this is not a very stong password. Click on enter to go to the next level.";
+const text3 = "Thank you! This will work just fine. Click on enter to go to the next level.";
 
 //progress bar
 const calculatePasswordStrength = (password) => {
-  const length = password.length;
   const hasLowercase = /[a-z]/.test(password);
   const hasUppercase = /[A-Z]/.test(password);
   const hasNumber = /\d/.test(password);
@@ -61,19 +61,25 @@ const passwordStrength = strength * 100;
 //all conditions met show third dialog
 const [allConditionsMet, setAllConditionsMet] = useState(false);
 
-  useEffect(() => {
-    const { conditionsMet } = calculatePasswordStrength(inputValue);
-    setAllConditionsMet(conditionsMet === 4);
-    if (conditionsMet === 4) {
-      setDialogState(3);
-    }
-  }, [inputValue]);
+
+useEffect(() => {
+  const { conditionsMet } = calculatePasswordStrength(inputValue);
+  setAllConditionsMet(conditionsMet === 4);
+  setScore(conditionsMet * 5);
+  if (conditionsMet === 4) {
+    setDialogState(3);
+  }
+}, [inputValue]);
 
   return (
     
     
           <div className="home">
             <CanvasAnimation />
+
+            <div className="game1score">
+            Score: {score}
+            </div>
             
               <div className="dialog-content">
               <div className={`dialog-box ${dialogState === 1 ? 'visible' : 'hidden'}`} style={{ opacity: dialogState === 1 ? 1 : 0 }}>
@@ -85,7 +91,7 @@ const [allConditionsMet, setAllConditionsMet] = useState(false);
         <div className="arrow-left"></div>
       </div>
 
-      <div className={`dialog-box ${dialogState === 2 ? 'visible' : 'hidden'}`}>
+      <div className={`dialog-box ${dialogState === 2 ? 'visible' : 'hidden'}`} >
       <p>Use my pet's name: <b>Akili</b>. It is easy to remember and share.</p>
         <p id="dialog2">{text2}</p>
         <div className="arrow-left"></div>

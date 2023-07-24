@@ -63,7 +63,7 @@ const Email1 = () => {
         ) : null}
   
         <div className="score" id="score">
-          Score: {score}
+          Score: {score}/5
         </div>
         <div className="backgroundemail1">
         <div className="rectangle2">
