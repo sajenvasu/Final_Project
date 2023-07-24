@@ -1,16 +1,13 @@
-import {forwardRef} from 'react';
+import { Link } from 'react-router-dom';
 import password from './pictures/password_strength.png';
 import phishing from './pictures/phishing.JPEG';
 import './App.css';
 
-import './game1/start';
-import './game2/game2start';
-import { Link } from 'react-router-dom';
-
-function Games(props, ref){
+function Games(){
     return(
-    <div>
-        <div id = "gamestab" ref={ref}>
+    <div class='gPage'>
+        <div id = "gamestab">
+            <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' class='arrow'/></Link>
             <h3 class="games-heading">GAMES</h3>
             <Link class="game1" to ="/start"> <img src={password} alt="password_strength" class="games"></img>  </Link>
             <Link class="game2" to ="/game2start"><img src={phishing} alt="phishing" class="games"></img></Link>
@@ -20,4 +17,4 @@ function Games(props, ref){
     );
 }
 
-export default forwardRef(Games);
+export default Games;

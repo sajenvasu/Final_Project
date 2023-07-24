@@ -1,15 +1,15 @@
 import './App.css';
-
-import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Games from './Games';
 
 function Home() {
 
-    const reference = useRef(null);
-
     const scrolltoGames = () => {
-        reference.current?.scrollIntoView({behavior: 'smooth'});
+        const element = document.getElementById('gamestab');
+        console.log(element);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
 
@@ -25,12 +25,11 @@ function Home() {
             <div class="menu">
                 <Link to= "/"><button class="headin"><h2 class="headings">About</h2></button></Link>
                 <Link to= "/Login"><button class="headin"><h2 class="headings">Login</h2></button></Link>
-                <button class="headin" onclick={scrolltoGames()}><h2 class="headings">Games</h2></button>  
+                <Link to= "/Games"><button class="headin" onclick={scrolltoGames()}><h2 class="headings">Games</h2></button></Link>
             </div>
     
             <div class="developed">Developed by Sameeksha Abhijit Nair, Sajen Vasuthevan and Jasnoor Mallhi</div>
         </div>
-        <Games ref={reference}/>
       </div>
   );
 }

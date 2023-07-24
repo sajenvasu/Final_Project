@@ -2,7 +2,8 @@ import React from 'react';
 
 import Login from './Login';
 import Home from './Home';
-import Create from './Create'
+import Create from './Create';
+import Games from './Games';
 
 import { Routes, Route } from 'react-router-dom';
 import Game1Home from './game1/game1home';
@@ -40,6 +41,7 @@ function App() {
         <Route path="/email2" element={<Email2 />} />
         <Route path="/email3" element={<Email3 />} />
 
+            <Route path="/Games" element={<Games />} />
         </Routes>
 
         </div>
