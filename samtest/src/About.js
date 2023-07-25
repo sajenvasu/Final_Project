@@ -17,7 +17,7 @@ function About(){
                 <div style={{display: 'inline-block'}}>
                     <h2 class= "what">What is<br></br> Cybersecurity?</h2>
                 </div>
-                <Link><p class="next">Why is it important</p></Link>
+                <Link to="/Importance"><p class="next">Why is it important</p></Link>
             </div>
             
         </div>
