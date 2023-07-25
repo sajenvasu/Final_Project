@@ -116,7 +116,7 @@ a{
 }
 
 .App{
-    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background: url(https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?cs=srgb&dl=pexels-felix-mittermeier-1146134.jpg&fm=jpg) no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -225,6 +225,7 @@ a{
     margin-top: 5ex;  
     position: fixed;
     background-color: #004979;
+    animation: slide 2s;
 }
 
 .Abarrow{
@@ -236,8 +237,9 @@ a{
 .info{
     position: fixed;
     color: white;
-
+    animation: slide 2s;
 }
+
 
 @media screen and (max-width:4000px) {
     .info{
@@ -313,7 +315,7 @@ a{
     text-align: left;
     display: inline-block;
     position: fixed;
-    
+    animation: slide 2s;
 }
 
 .next{
