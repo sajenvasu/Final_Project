@@ -236,14 +236,80 @@ a{
 .info{
     position: fixed;
     color: white;
-    margin-left: 80ex;
-    margin-right: 15ex;
-    font-size: 2.5ex;
-    margin-top: 10ex;
+
+}
+
+@media screen and (max-width:4000px) {
+    .info{
+        margin-left: 90ex;
+        margin-right: 20ex;
+        font-size: 4.7ex;
+        margin-top: 10ex;
+    }
+    .what{
+        margin-left: 30px;
+        margin-top: 200px;
+        font-size: 25ex;
+    }
+
+    .next{
+        margin-top: 64ex;
+        margin-left: 133ex;
+        font-size: 4ex;
+        padding-left: 6ex;
+
+    }
+}
+
+@media screen and (max-width:3000px) {
+    .info{
+        margin-left: 80ex;
+        margin-right: 15ex;
+        font-size: 2.5ex;
+        margin-top: 10ex;
+    }
+    .what{
+        margin-left: 2px;
+        margin-top: 120px;
+        font-size: 12.5ex;
+    }
+
+    .next{
+        margin-top: 64ex;
+        margin-left: 127ex;
+        font-size: 2.1ex;
+
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .info{
+        margin-left: 70ex;
+        margin-right: 12ex;
+        font-size: 1.5ex;
+        margin-top: 10ex;
+    }
+    .what{
+        margin-left: 2px;
+        margin-top: 70px;
+        font-size: 6ex;
+    }
+
+    .next{
+        margin-top: 69ex;
+        margin-left: 140ex;
+        font-size: 1.1ex;
+
+    }
+    #abouttab{
+        width: 87%;
+        height: 87%;
+        margin-left: 7ex;  
+        margin-top: 3ex;  
+    }
 }
 
 .what{
-    font-size: 12.5ex;
     text-align: left;
     display: inline-block;
     position: fixed;
@@ -251,9 +317,6 @@ a{
 }
 
 .next{
-    margin-top: 64ex;
-    margin-left: 133ex;
-    font-size: 2.1ex;
     color: white;
 }
 
