@@ -4,6 +4,7 @@ import Login from './Login';
 import Home from './Home';
 import Create from './Create';
 import Games from './Games';
+import About from './About';
 
 import { Routes, Route } from 'react-router-dom';
 import Game1Home from './game1/game1home';
@@ -26,6 +27,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Login" element={<Login />} />
             <Route path="/Create" element={<Create />} />
+            <Route path="/Games" element={<Games />} />
+            <Route path="/About" element={<About/>}/>
 
             <Route path="/start" element={<Start />} />
             
@@ -41,7 +44,7 @@ function App() {
         <Route path="/email2" element={<Email2 />} />
         <Route path="/email3" element={<Email3 />} />
 
-            <Route path="/Games" element={<Games />} />
+           
         </Routes>
 
         </div>

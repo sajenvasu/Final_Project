@@ -218,6 +218,45 @@ a{
     animation: animation-colors 20s linear 1s infinite;   
 }
 
+#abouttab{
+    width: 87%;
+    height: 87%;
+    margin-left: 13ex;  
+    margin-top: 5ex;  
+    position: fixed;
+    background-color: #004979;
+}
+
+.Abarrow{
+    transform: scaleX(-1);
+    max-width: 5%;
+    margin-bottom: -5ex;
+}
+
+.info{
+    position: fixed;
+    color: white;
+    margin-left: 80ex;
+    margin-right: 15ex;
+    font-size: 2.5ex;
+    margin-top: 10ex;
+}
+
+.what{
+    font-size: 12.5ex;
+    text-align: left;
+    display: inline-block;
+    position: fixed;
+    
+}
+
+.next{
+    margin-top: 64ex;
+    margin-left: 133ex;
+    font-size: 2.1ex;
+    color: white;
+}
+
 .gPage{
     position: fixed;
     animation: fadeIn 2s;

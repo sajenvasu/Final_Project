@@ -1,18 +1,7 @@
 import './App.css';
 import { Link } from 'react-router-dom';
-import Games from './Games';
 
 function Home() {
-
-    const scrolltoGames = () => {
-        const element = document.getElementById('gamestab');
-        console.log(element);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
-
-
   return (
         <div class="part1">
             <div class="bg"></div>
@@ -23,7 +12,7 @@ function Home() {
             
             <h1>CYBERSECURITY <br></br> GAMES </h1>
             <div class="menu">
-                <Link to= "/"><button class="headin"><h2 class="headings">About</h2></button></Link>
+                <Link to= "/About"><button class="headin"><h2 class="headings">About</h2></button></Link>
                 <Link to= "/Login"><button class="headin"><h2 class="headings">Login</h2></button></Link>
                 <Link to= "/Games"><button class="headin"><h2 class="headings">Games</h2></button></Link>
             </div>
