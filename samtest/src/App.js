@@ -29,17 +29,17 @@ function App() {
 
             <Route path="/start" element={<Start />} />
             
-        <Route path="/game1home" element={<Game1Home />} />
-        <Route path="/pwd-checker" element={<Checker />} />
-        <Route path="/lvl2" element={<Lvl2 />} />
-        <Route path="/lvl3" element={<Lvl3 />} />
+            <Route path="/game1home" element={<Game1Home />} />
+            <Route path="/pwd-checker" element={<Checker />} />
+            <Route path="/lvl2" element={<Lvl2 />} />
+            <Route path="/lvl3" element={<Lvl3 />} />
             
 
-        <Route path="/game2start" element={<Game2Start />} />
-        <Route path="/game2home" element={<Game2Home />} />
-        <Route path="/email1" element={<Email1 />} />
-        <Route path="/email2" element={<Email2 />} />
-        <Route path="/email3" element={<Email3 />} />
+            <Route path="/game2start" element={<Game2Start />} />
+            <Route path="/game2home" element={<Game2Home />} />
+            <Route path="/email1" element={<Email1 />} />
+            <Route path="/email2" element={<Email2 />} />
+            <Route path="/email3" element={<Email3 />} />
 
             <Route path="/Games" element={<Games />} />
         </Routes>
