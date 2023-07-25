@@ -1,0 +1,175 @@
+@import url('https://fonts.cdnfonts.com/css/dotcirful');
+
+.home{
+  background-color: black;
+}
+
+
+.dialog-box {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 0%, 0.9);
+  width: 400px;
+  height: auto;
+  padding: 10px 25px;
+  border-radius: 80px;
+  border-style: solid;
+  border-color: rgb(107, 143, 162);
+  border-right: 8px;
+  border-bottom: 8px;
+  border-width: 3px;
+  animation: delay 2s forwards;
+}
+.dialog-box button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  bottom: 5%;
+  left: 80%;
+  padding: 10px 10px;
+  background-color: #145d77;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+.dialog-content {
+  
+  color: rgb(255, 255, 255);
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-align: center;
+  animation: delay 2s forwards;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid rgb(107, 143, 162);
+  animation: delay 2s forwards;
+  
+}
+
+.level{
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 30px;
+  padding: 5px;
+  color: rgb(255, 255, 255);;
+  font-family: 'Deltha', sans-serif;
+}
+.game1score{
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 30px;
+  padding: 5px;
+  color: rgb(255, 255, 255);;
+  font-family: 'Deltha', sans-serif;
+}
+
+.meterbox1{
+  font-family: 'Deltha', sans-serif;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(24, 23, 23, 0.9);
+  border-style: solid;
+  border-color: rgb(15, 95, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(85, 255, 0, 0.4);
+
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+
+  height: 30%;
+  width: 99%;
+  
+}
+.meterbox1 p{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.meterbox1 input{
+  height: 25%;
+  width: 40%;
+}
+
+.meterbox1 button{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 5%;
+  right: 27%;
+  padding: 10px 25px;
+  background-color: #042b01;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  z-index: 10;
+}
+
+.hintbut{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 2%;
+  right: 2%;
+  padding: 10px;
+  background-color: #052d02;
+  color: #fff;
+  border-radius: 90px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 5px rgba(85, 255, 0, 0.4);
+  
+}
+
+.hintbox{
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 85%;
+  top: 70%;
+  background-color: rgba(42, 42, 42, 0.8);
+  padding: 20px 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: left;
+  width: 20%;
+  height: auto;
+}
+
+.progress-bar-game {
+  position: absolute;
+  top: 60%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  height: 5px;
+  background-color: #ababab;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 5px;
+}

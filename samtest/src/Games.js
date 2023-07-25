@@ -9,8 +9,8 @@ function Games(){
         <div id = "gamestab">
             <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' class='arrow'/></Link>
             <h3 class="games-heading">GAMES</h3>
-            <a href="games/game1/game1.html" class="game1"><img src={password} alt="password_strength" class="games"></img></a>
-            <a href="games/game1/game1.html" class="game1"><img src={phishing} alt="phishing" class="games"></img></a>
+            <Link class="game1" to ="/start"> <img src={password} alt="password_strength" class="games"></img>  </Link>
+            <Link class="game2" to ="/game2start"><img src={phishing} alt="phishing" class="games"></img></Link>
         </div>
     </div>
     
