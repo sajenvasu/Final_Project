@@ -9,7 +9,7 @@ function About(){
             
                 <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' class='Abarrow'/></Link>
                 <div class='inside'>
-                <p class="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
+                <p className="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
                  networks, programs, and data from unauthorized access, use, disclosure, disruption, modification, or destruction. 
                  It encompasses various technologies, processes, and practices that aim to safeguard digital assets and information from cyber threats and attacks.
                  <br></br><br></br>
