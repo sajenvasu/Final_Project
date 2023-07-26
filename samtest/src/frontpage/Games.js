@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import password from './pictures/password_strength.png';
-import phishing from './pictures/phishing.JPEG';
-import './App.css';
+import password from '../pictures/password_strength.png';
+import phishing from '../pictures/phishing.JPEG';
+import '../App.css';
 
 function Games(){
     return(

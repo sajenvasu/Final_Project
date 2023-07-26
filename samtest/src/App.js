@@ -3,8 +3,12 @@ import React from 'react';
 import Login from './Login';
 import Home from './Home';
 import Create from './Create';
-import Games from './Games';
-import About from './About';
+import Games from './frontpage/Games';
+import About from './frontpage/About';
+import Import from './frontpage/Import';
+import Types from './frontpage/Types';
+import Avoid from './frontpage/Avoid';
+import Link from './frontpage/Links';
 
 import { Routes, Route } from 'react-router-dom';
 import Game1Home from './game1/game1home';
@@ -29,6 +33,10 @@ function App() {
             <Route path="/Create" element={<Create />} />
             <Route path="/Games" element={<Games />} />
             <Route path="/About" element={<About/>}/>
+            <Route path="/Importance" element={<Import/>}/>
+            <Route path="/Types" element={<Types/>}/>
+            <Route path="/Avoid" element={<Avoid/>}/>
+            <Route path="/Links" element={<Link/>}/>
 
             <Route path="/start" element={<Start />} />
             
