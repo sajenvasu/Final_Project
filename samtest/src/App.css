@@ -276,20 +276,26 @@ a{
 
 @media screen and (max-width:3000px) {
     .info{
-        margin-left: 80ex;
-        margin-right: 15ex;
-        font-size: 2.5ex;
-        margin-top: -1ex;
+        position: absolute;
+        bottom: 5%;
+        text-align: left;
+        right: -10%;
+        font-size: 25px;
+        width: 35%;
+        height: auto;
+        
     }
     .what{
-        margin-left: 65px;   
-        font-size: 12.5ex;
-        margin-top: 0ex;
+        position: relative;
+        bottom: 40%;
+        font-size: 10.5ex;
+
     }
 
     .next{
-        margin-top: 56ex;
-        margin-left: 127ex;
+        position: relative;
+        margin-top: 53ex;
+        margin-left: 105ex;
         font-size: 2.1ex;
 
     }
