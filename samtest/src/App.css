@@ -240,6 +240,8 @@ a{
     position: fixed;
     color: white;
     animation: slide 2s;
+    top: 20%;
+    left: 5%;
 }
 
 #importtab{
@@ -276,27 +278,22 @@ a{
 
 @media screen and (max-width:3000px) {
     .info{
-        position: absolute;
-        bottom: 5%;
-        text-align: left;
-        right: -10%;
-        font-size: 25px;
-        width: 35%;
-        height: auto;
-        
+        margin-left: 50%;
+        margin-right: 15ex;
+        font-size: 2.5ex;
+        margin-top: -1ex;
     }
     .what{
-        position: relative;
-        bottom: 40%;
+        margin-left: 65px;   
         font-size: 10.5ex;
-
+        margin-top: 0ex;
     }
 
     .next{
-        position: relative;
         margin-top: 53ex;
         margin-left: 105ex;
         font-size: 2.1ex;
+
 
     }
     .previous{
@@ -349,11 +346,17 @@ a{
     display: inline-block;
     position: fixed;
     animation: slide 2s;
+    top: 20%;
 }
+
 
 .next{
     color: white;
     visibility: hidden;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    width: 20%;
     animation: delayFade 2s ease-in-out 3s;    
     animation-fill-mode: forwards;
 
@@ -372,6 +375,10 @@ a{
     visibility: hidden;
     animation: delayFade 2s ease-in-out 3s;    
     animation-fill-mode: forwards;
+    position: fixed;
+    bottom: 10%;
+    left: 2%;
+    width: 20%;
 
 }
 
