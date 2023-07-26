@@ -11,13 +11,16 @@ function Types(){
                 
                 <div  class='inside'>
                     <h2 class= "what" style={{fontSize: '50px', marginLeft: '2ex', marginTop: '-1.5ex'}}>Types of Security Threats:</h2>
-                    <p class="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
-                 networks, programs, and data from unauthorized access, use, disclosure, disruption, modification, or destruction. 
-                 It encompasses various technologies, processes, and practices that aim to safeguard digital assets and information from cyber threats and attacks.
-                 <br></br><br></br>
-                 The importance of cybersecurity has grown significantly with the increasing reliance on technology and the internet in both personal and professional settings. 
-                 Cybersecurity measures are necessary to defend against a wide range of threats
-                 <ul style={{marginLeft: '-50ex', marginTop: '-18ex', fontSize: '3ex'}}>
+                    <p class="info">Malware: Malicious software like viruses, worms, Trojans, and ransomware that infect systems and cause harm or data loss.
+                    <br></br><br></br>Phishing: Deceptive emails, messages, or websites that trick users into revealing sensitive information like passwords or credit card details.
+                    <br></br><br></br>Hacking and Unauthorized Access: Intrusions into computer systems, networks, or accounts to gain unauthorized access or control.
+                    <br></br><br></br>Distributed Denial of Service (DDoS) Attacks: Overloading a system or website with an excessive amount of traffic, making it unavailable to legitimate users.
+                    <br></br><br></br>Data Breaches: Unauthorized access to sensitive information, often leading to its public exposure or sale on the dark web.
+                    <br></br><br></br>Insider Threats: Malicious actions taken by employees or people within an organization to compromise security.
+
+            
+            
+                 <ul style={{marginLeft: '-50ex', marginTop: '-38ex', fontSize: '3ex'}}>
                     <li>Malware</li>
                     <li>Phishing</li>
                     <li>Hacking and Unauthorised</li>
