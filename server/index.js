@@ -54,15 +54,15 @@ const verifyLogin = (req, res, next) => {
     }
 }
 
-app.get('/dashboard',verifyLogin ,(req, res) => {
+app.get('/',verifyLogin ,(req, res) => {
     res.json("Success")
 })
 
 app.post('/Create', (req, res) => {
-    const {name, email, password} = req.body;
+    const {gametag, password} = req.body;
     bcrypt.hash(password, 10)
     .then(hash => {
-        UserModel.create({name, email, password: hash})
+        UserModel.create({gametag, password: hash})
         .then(user => res.json("Success"))
         .catch(err => res.json(err))
     }).catch(err => res.json(err))
