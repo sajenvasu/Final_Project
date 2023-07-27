@@ -30,10 +30,10 @@ function Login(){
                     <br></br>
                     <div className="rememberme" style={{marginLeft: '10px', paddingLeft: '70px'}}>
                         <input type="checkbox" id="remember" name="rememberme"></input>
-                        <label for="rememberme" style={{padding: '10px'}}>Remember Me</label>
+                        <label htmlFor="rememberme" style={{padding: '10px'}}>Remember Me</label>
                         
                     </div>
-                    <label for="forgotpass" style={{paddingLeft: '12px'}}><br></br>Forgot Password?</label>
+                    <label htmlFor="forgotpass" style={{paddingLeft: '12px'}}><br></br>Forgot Password?</label>
                     <button type="submit">Login</button>
                     
                 </form>
