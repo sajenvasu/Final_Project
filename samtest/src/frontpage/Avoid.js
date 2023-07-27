@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 function Avoid(){
     return(
     <div>
-        <div class="bg"></div>
-        <div class="aboutbg">
+        <div className="bg"></div>
+        <div className="aboutbg">
             <div id = "importtab">
-                <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' class='Abarrow'/></Link>
+                <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow'/></Link>
                 
-                <div  class='inside'>
-                    <h2 class= "what" style={{fontSize: '50px', marginLeft: '2ex', marginTop: '-1.5ex'}}>How to Avoid these Threats:</h2>
-                    <p class="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
+                <div  className='inside'>
+                    <h2 className= "what" style={{fontSize: '50px', marginLeft: '2ex', marginTop: '-1.5ex'}}>How to Avoid these Threats:</h2>
+                    <p className="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
                  networks, programs, and data from unauthorized access, use, disclosure, disruption, modification, or destruction. 
                  It encompasses various technologies, processes, and practices that aim to safeguard digital assets and information from cyber threats and attacks.
                  <br></br><br></br>
@@ -28,8 +28,8 @@ function Avoid(){
                  </p>
 
                 </div>
-                <Link to="/Links"><p class="next" style={{marginLeft:'135ex'}}>Some Links -{'>'}</p></Link>
-                <Link to="/Types"><p class="previous" style={{marginRight: '123ex'}}>{'<'}- Types of Cybersecurity threats </p></Link>
+                <Link to="/Links"><p className="next" style={{marginLeft:'135ex'}}>Some Links -{'>'}</p></Link>
+                <Link to="/Types"><p className="previous" style={{marginRight: '123ex'}}>{'<'}- Types of Cybersecurity threats </p></Link>
             </div>            
         </div>      
     </div>

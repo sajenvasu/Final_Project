@@ -19,16 +19,16 @@ function Login(){
     }
     return(
     <div>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <div id = "logintab">
-            <div class="login-form">
-                <h3 class="login-heading">Login</h3>
-                <form class="login" onSubmit={handleSubmit}>
+            <div className="login-form">
+                <h3 className="login-heading">Login</h3>
+                <form className="login" onSubmit={handleSubmit}>
                     <input type="text" id="gametag" name="gametag" required placeholder="Gamertag" onChange={(e) => setGameTag(e.target.value)}></input>
                     <br></br>
                     <input type="password" id="password" name="password" required placeholder="Password"  onChange={(e) => setPassword(e.target.value)}></input>
                     <br></br>
-                    <div class="rememberme" style={{marginLeft: '10px', paddingLeft: '70px'}}>
+                    <div className="rememberme" style={{marginLeft: '10px', paddingLeft: '70px'}}>
                         <input type="checkbox" id="remember" name="rememberme"></input>
                         <label for="rememberme" style={{padding: '10px'}}>Remember Me</label>
                         
@@ -38,7 +38,7 @@ function Login(){
                     
                 </form>
                 <h4>Or</h4>
-                <Link to= "/Create"><button class="createbutton">Create an Account</button></Link>
+                <Link to= "/Create"><button className="createbutton">Create an Account</button></Link>
                 <br></br>
                 <Link to= "/"><p style={{marginTop: '20px'}}>Back to Home</p></Link>
             </div>

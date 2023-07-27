@@ -5,12 +5,12 @@ import '../App.css';
 
 function Games(){
     return(
-    <div class='gPage'>
+    <div className='gPage'>
         <div id = "gamestab">
-            <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' class='arrow'/></Link>
-            <h3 class="games-heading">GAMES</h3>
-            <Link class="game1" to ="/start"> <img src={password} alt="password_strength" class="games"></img>  </Link>
-            <Link class="game2" to ="/game2start"><img src={phishing} alt="phishing" class="games"></img></Link>
+            <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='arrow'/></Link>
+            <h3 className="games-heading">GAMES</h3>
+            <Link className="game1" to ="/start"> <img src={password} alt="password_strength" className="games"></img>  </Link>
+            <Link className="game2" to ="/game2start"><img src={phishing} alt="phishing" className="games"></img></Link>
         </div>
     </div>
     
