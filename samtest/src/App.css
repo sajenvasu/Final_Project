@@ -21,6 +21,7 @@ html{
     animation-duration: 3s;
     animation-delay: 1s;
     visibility: hidden;
+    font-weight: 1000;
     animation-fill-mode: forwards;
 }
 
