@@ -7,18 +7,30 @@ function Login(){
     const [gametag, setGameTag] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
+
+    var [text1, setText]= useState();
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('http://localhost:3001/Login', {gametag, password})
         .then(res => {
-            console.log("login: " + res.data);
+            showDialog(res.data);
             if(res.data.Status === "Success") {
+                    
                     navigate('/')
             }
         }).catch(err => console.log(err))
     }
 
+    
+    const [dialogState, setDialogState] = useState(0);
 
+    const showDialog = (text2) => {
+        setText(()=> text2);
+        setDialogState((prevState) => prevState + 1);
+
+
+    };
+  
     return(
     <div>
         <div className="bg"></div>
@@ -33,7 +45,7 @@ function Login(){
                     <div className="rememberme" style={{marginLeft: '10px', paddingLeft: '70px'}}>
                         <input type="checkbox" id="remember" name="rememberme"></input>
                         <label htmlFor="rememberme" style={{padding: '10px'}}>Remember Me</label>
-                        
+                        <div className={`alert-box ${dialogState >= 1 ? 'visible' : 'hidden'}`}>{text1}</div>
                     </div>
                     <label htmlFor="forgotpass" style={{paddingLeft: '12px'}}><br></br>Forgot Password?</label>
                     <button type="submit">Login</button>

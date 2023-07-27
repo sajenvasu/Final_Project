@@ -525,3 +525,10 @@ b{
     font-size: 3ex;
     color: white;
 }
+
+.alert-box{
+    margin-top: 2ex;
+    margin-left: -10ex;
+    background-color: red;
+    animation: fadeIn 0.5s;
+}

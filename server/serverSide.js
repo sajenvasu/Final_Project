@@ -91,7 +91,7 @@ app.post('/Login', (req, res) => {
                 }
             })
         } else {
-            return res.json("No record existed")
+            return res.json("No record exists. Create a new one")
         }
     })
 })
