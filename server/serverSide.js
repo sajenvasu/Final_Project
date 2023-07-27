@@ -7,14 +7,21 @@ mongoose.connect(url).then(() => {
     console.log("Not Connected to Database ERROR! ", err);
 });*/
 
+const mongoose = require('mongoose')
+const UserSchema = new mongoose.Schema({
+    gametag: String,
+    password: String,
+})
+
+const UserModel = mongoose.model("users", UserSchema)
+module.exports = UserModel
 
 const express = require("express")
-const mongoose = require('mongoose')
+
 const cors = require("cors")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const cookieParser = require('cookie-parser')
-const UserModel = require('./models/User')
 const corsOptions ={
     origin:'http://localhost:3000', 
     credentials:true,            //access-control-allow-credentials:true
