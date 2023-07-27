@@ -10,13 +10,13 @@ function Types(){
                 <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow'/></Link>
                 
                 <div  className='inside'>
-                    <h2 className= "what" style={{fontSize: '50px', marginLeft: '2ex', marginTop: '-1.5ex'}}>Types of Security Threats:</h2>
-                    <p className="info">Malware: Malicious software like viruses, worms, Trojans, and ransomware that infect systems and cause harm or data loss.
-                    <br></br><br></br>Phishing: Deceptive emails, messages, or websites that trick users into revealing sensitive information like passwords or credit card details.
-                    <br></br><br></br>Hacking and Unauthorized Access: Intrusions into computer systems, networks, or accounts to gain unauthorized access or control.
-                    <br></br><br></br>Distributed Denial of Service (DDoS) Attacks: Overloading a system or website with an excessive amount of traffic, making it unavailable to legitimate users.
-                    <br></br><br></br>Data Breaches: Unauthorized access to sensitive information, often leading to its public exposure or sale on the dark web.
-                    <br></br><br></br>Insider Threats: Malicious actions taken by employees or people within an organization to compromise security.
+                    <h2 className= "what" style={{fontSize: '50px', marginLeft: '1ex', marginTop: '50px'}}>Types of Security Threats:</h2>
+                    <p className="info" style={{fontSize: '20px', marginTop: '-25px'}}><b>Malware:</b> Malicious software like viruses, worms, Trojans, and ransomware that infect systems and cause harm or data loss.
+                    <br></br><br></br><b>Phishing:</b> Deceptive emails, messages, or websites that trick users into revealing sensitive information like passwords or credit card details.
+                    <br></br><br></br><b>Hacking and Unauthorized Access:</b> Intrusions into computer systems, networks, or accounts to gain unauthorized access or control.
+                    <br></br><br></br><b>Distributed Denial of Service (DDoS) Attacks:</b> Overloading a system or website with an excessive amount of traffic, making it unavailable to legitimate users.
+                    <br></br><br></br><b>Data Breaches:</b> Unauthorized access to sensitive information, often leading to its public exposure or sale on the dark web.
+                    <br></br><br></br><b>Insider Threats:</b> Malicious actions taken by employees or people within an organization to compromise security.
 
             
             

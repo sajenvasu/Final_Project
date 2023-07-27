@@ -10,14 +10,15 @@ function Avoid(){
                 <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow'/></Link>
 
                 <div  className='inside'>
-                    <h2 className= "what" style={{fontSize: '50px', marginLeft: '2ex', marginTop: '-1.5ex'}}>How to Avoid these Threats:</h2>
-                    <p className="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
-                 networks, programs, and data from unauthorized access, use, disclosure, disruption, modification, or destruction. 
-                 It encompasses various technologies, processes, and practices that aim to safeguard digital assets and information from cyber threats and attacks.
-                 <br></br><br></br>
-                 The importance of cybersecurity has grown significantly with the increasing reliance on technology and the internet in both personal and professional settings. 
-                 Cybersecurity measures are necessary to defend against a wide range of threats
-                 <ul style={{marginLeft: '-40ex', marginTop: '-18ex', fontSize: '30px'}}>
+                    <h2 className= "what" style={{fontSize: '50px', marginLeft: '1px', top: '10%'}}>How to Avoid these Threats:</h2>
+                    <p className="info" style={{fontSize: '20px', marginTop: '-25px'}}><b>Use Strong Passwords:</b> Create unique and complex passwords for each account and enable multi-factor authentication.
+                    <br></br><br></br><b>Keep Software Updated:</b> Regularly update operating systems, applications, and antivirus software to patch security vulnerabilities.
+                    <br></br><br></br><b>Be Cautious with Email:</b> Avoid clicking on suspicious links or downloading attachments from unknown sources.
+                    <br></br><br></br><b>Use Secure Networks:</b> Avoid using public Wi-Fi for sensitive tasks, and opt for encrypted connections (e.g., VPN) when accessing the internet.
+                    <br></br><br></br><b>Backup Data Regularly:</b> Keep backups of important files on separate devices or cloud storage to prevent data loss in case of an attack.
+                    <br></br><br></br><b>Train Employees and Users:</b> Educate employees and users about cybersecurity best practices, such as recognizing phishing attempts.
+
+                 <ul style={{marginLeft: '-40ex', marginTop: '-25ex', fontSize: '30px'}}>
                  <li>Use Strong Passwords</li>
                     <li>Keep Software Updated</li>
                     <li>Be Cautious with Email</li>
@@ -29,7 +30,7 @@ function Avoid(){
 
                 </div>
                 <Link to="/Links"><p className="next" style={{marginLeft:'135ex'}}>Some Links -{'>'}</p></Link>
-                <Link to="/Types"><p className="previous" style={{marginRight: '123ex'}}>{'<'}- Types of Cybersecurity threats </p></Link>
+                <Link to="/Types"><p className="previous" style={{left: '10%'}}>{'<'}- Types of Cybersecurity threats </p></Link>
             </div>            
         </div>      
     </div>
