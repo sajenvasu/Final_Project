@@ -1,7 +1,8 @@
+import './quiz-style.css';
 function beginquiz(){
     return(
-        <div>
-            <h2>Begin Quiz</h2>
+        <div className = "beginQuizCont">
+            <h3>Begin Quiz</h3>
         
         </div>
     );
