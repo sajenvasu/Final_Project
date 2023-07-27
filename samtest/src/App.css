@@ -21,6 +21,7 @@ html{
     animation-duration: 3s;
     animation-delay: 1s;
     visibility: hidden;
+    font-weight: 1000;
     animation-fill-mode: forwards;
 }
 
@@ -378,6 +379,11 @@ form{
     animation-name: leftright;
     animation-duration: 2s;
     transition: transform 0.5s ease;
+}
+
+.createbutton:hover{
+    background-color: #e3dddc;
+    color: #3a008c;
 }
 
 .login-form{
