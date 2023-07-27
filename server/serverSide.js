@@ -76,13 +76,13 @@ app.post('/Create', (req, res) => {
 })
 
 app.post('/Login', (req, res) => {
-    const {email, password} = req.body;
-    UserModel.findOne({email: email})
+    const {gametag, password} = req.body;
+    UserModel.findOne({gametag: gametag})
     .then(user => {
         if(user) {
             bcrypt.compare(password, user.password, (err, response) => {
                 if(response) {
-                  const token = jwt.sign({email: user.email, role: user.role},
+                  const token = jwt.sign({gametag: user.gametag, role: user.role},
                         "jwt-secret-key", {expiresIn: '1d'})  
                     res.cookie('token', token)
                     return res.json({Status: "Success", role: user.role})

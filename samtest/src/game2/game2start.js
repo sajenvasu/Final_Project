@@ -27,6 +27,7 @@ const Game2Start = () => {
   return (
     <>
 <div className="background">
+      <Link to= "/Games"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow' style={{marginLeft:'-180ex', marginBottom: '-8ex'}}/></Link>
       <div className="title-phish">
       <div className="hed1">Phish Hunt</div>
       <div className="hed2">Learn to spot the scams</div>

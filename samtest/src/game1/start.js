@@ -30,6 +30,7 @@ function Start() {
 
   return (
     <div className="startbody">
+      <Link to= "/Games"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow' style={{backgroundColor: 'white', marginLeft:'-125ex', marginBottom: '-9ex'}}/></Link>
       <div className="container">
         <div className="title"> 
         Secure Meter
