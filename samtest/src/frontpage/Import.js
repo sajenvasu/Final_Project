@@ -21,6 +21,7 @@ function Import(){
                 </div>
                 <Link to="/Types"><p className="next" style={{marginLeft:'117ex'}}>Types of Cybersecurity threats -{'>'}</p></Link>
                 <Link to="/About"><p className="previous">{'<'}- What is Cybersecurity</p></Link>
+
             </div>            
         </div>
             

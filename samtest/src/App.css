@@ -238,9 +238,13 @@ a{
 }
 
 .info{
-    position: fixed;
+    position: absolute;
     color: white;
     animation: slide 2s;
+    font-size: 23px;
+    top: 10%;
+    left: 55%;
+    margin-right: 30px;
 }
 
 #importtab{
@@ -253,102 +257,25 @@ a{
 }
 
 
-@media screen and (max-width:4000px) {
-    .info{
-        margin-left: 90ex;
-        margin-right: 20ex;
-        font-size: 4.7ex;
-        margin-top: 10ex;
-    }
-    .what{
-        margin-left: 30px;
-        margin-top: 200px;
-        font-size: 25ex;
-    }
 
-    .next{
-        margin-top: 64ex;
-        margin-left: 133ex;
-        font-size: 4ex;
-        padding-left: 6ex;
-
-    }
-}
-
-@media screen and (max-width:3000px) {
-    .info{
-        margin-left: 80ex;
-        margin-right: 15ex;
-        font-size: 2.5ex;
-        margin-top: -1ex;
-    }
-    .what{
-        margin-left: 65px;   
-        font-size: 12.5ex;
-        margin-top: 0ex;
-    }
-
-    .next{
-        margin-top: 56ex;
-        margin-left: 127ex;
-        font-size: 2.1ex;
-
-    }
-    .previous{
-
-        margin-top: -5ex;
-        margin-left: 4ex;
-        margin-right: 130ex;
-        font-size: 2.1ex;
-
-    }
-}
-
-@media screen and (max-width:1000px) {
-    .info{
-        margin-left: 70ex;
-        margin-right: 12ex;
-        font-size: 1.5ex;
-        margin-top: 10ex;
-    }
-    .what{
-        margin-left: 2px;
-        margin-top: 70px;
-        font-size: 6ex;
-    }
-
-    .next{
-        margin-top: 69ex;
-        margin-left: 140ex;
-        font-size: 1.1ex;
-
-    }
-
-    .previous{
-        margin-top: 69ex;
-        margin-left: 140ex;
-        margin-right: 130ex;
-        font-size: 1.1ex;
-    }
-
-    #abouttab{
-        width: 87%;
-        height: 87%;
-        margin-left: 7ex;  
-        margin-top: 3ex;  
-    }
-}
 
 .what{
     text-align: left;
     display: inline-block;
     position: fixed;
     animation: slide 2s;
+    top: 10%;
+    left: 10%;
+    font-size: 90px;
 }
+
 
 .next{
     color: white;
     visibility: hidden;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
     animation: delayFade 2s ease-in-out 3s;    
     animation-fill-mode: forwards;
 
@@ -367,6 +294,10 @@ a{
     visibility: hidden;
     animation: delayFade 2s ease-in-out 3s;    
     animation-fill-mode: forwards;
+    position: fixed;
+    bottom: 10%;
+    left: 2%;
+    width: 20%;
 
 }
 

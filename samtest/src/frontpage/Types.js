@@ -20,7 +20,7 @@ function Types(){
 
             
             
-                 <ul style={{marginLeft: '-50ex', marginTop: '-38ex', fontSize: '3ex'}}>
+                 <ul style={{marginLeft: '-50ex', marginTop: '-25ex', fontSize: '25px'}}>
                     <li>Malware</li>
                     <li>Phishing</li>
                     <li>Hacking and Unauthorised</li>

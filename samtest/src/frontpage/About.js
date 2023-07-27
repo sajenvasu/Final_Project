@@ -7,6 +7,7 @@ function About(){
         <div className="aboutbg">
             <div id = "abouttab">
             
+
                 <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow'/></Link>
                 <div className='inside'>
                 <p className="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,

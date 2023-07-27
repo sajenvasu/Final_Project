@@ -8,7 +8,7 @@ function Avoid(){
         <div className="aboutbg">
             <div id = "importtab">
                 <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow'/></Link>
-                
+
                 <div  className='inside'>
                     <h2 className= "what" style={{fontSize: '50px', marginLeft: '2ex', marginTop: '-1.5ex'}}>How to Avoid these Threats:</h2>
                     <p className="info">Cybersecurity, also known as information security or IT security, refers to the practice of protecting computer systems,
@@ -17,7 +17,7 @@ function Avoid(){
                  <br></br><br></br>
                  The importance of cybersecurity has grown significantly with the increasing reliance on technology and the internet in both personal and professional settings. 
                  Cybersecurity measures are necessary to defend against a wide range of threats
-                 <ul style={{marginLeft: '-50ex', marginTop: '-18ex', fontSize: '3ex'}}>
+                 <ul style={{marginLeft: '-40ex', marginTop: '-18ex', fontSize: '30px'}}>
                  <li>Use Strong Passwords</li>
                     <li>Keep Software Updated</li>
                     <li>Be Cautious with Email</li>
