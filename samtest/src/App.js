@@ -23,6 +23,9 @@ import Email1 from './game2/email1';
 import Email2 from './game2/email2';
 import Email3 from './game2/email3';
 
+import Beginquiz from './game3/beginquiz';
+import Quiz from './game3/quiz';
+
 function App() {
     
     return (
@@ -40,18 +43,21 @@ function App() {
 
             <Route path="/start" element={<Start />} />
             
-        <Route path="/game1home" element={<Game1Home />} />
-        <Route path="/pwd-checker" element={<Checker />} />
-        <Route path="/lvl2" element={<Lvl2 />} />
-        <Route path="/lvl3" element={<Lvl3 />} />
+            <Route path="/game1home" element={<Game1Home />} />
+            <Route path="/pwd-checker" element={<Checker />} />
+            <Route path="/lvl2" element={<Lvl2 />} />
+            <Route path="/lvl3" element={<Lvl3 />} />
+                
+
+            <Route path="/game2start" element={<Game2Start />} />
+            <Route path="/game2home" element={<Game2Home />} />
+            <Route path="/email1" element={<Email1 />} />
+            <Route path="/email2" element={<Email2 />} />
+            <Route path="/email3" element={<Email3 />} />
+
+            <Route path="/beginquiz" element={<Beginquiz />} />
+            <Route path="/quiz" element={<Quiz />} />
             
-
-        <Route path="/game2start" element={<Game2Start />} />
-        <Route path="/game2home" element={<Game2Home />} />
-        <Route path="/email1" element={<Email1 />} />
-        <Route path="/email2" element={<Email2 />} />
-        <Route path="/email3" element={<Email3 />} />
-
            
         </Routes>
 

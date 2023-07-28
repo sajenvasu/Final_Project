@@ -1,0 +1,54 @@
+{
+    "quesArr" : [
+        {
+            "questions": "3+2",
+            "answerChoices": [
+                {"choice": "1"},
+                {"choice": "3"},
+                {"choice": "7"},
+                {"choice": "5"}
+            ],
+            "correctAnsChoice": "4"
+        },
+        {
+            "questions": "5+1",
+            "answerChoices": [
+                {"choice": "6"},
+                {"choice": "4"},
+                {"choice": "7"},
+                {"choice": "5"}
+            ],
+            "correctAnsChoice": "1"
+        },
+        {
+            "questions": "9+0",
+            "answerChoices": [
+                {"choice": "4"},
+                {"choice": "1"},
+                {"choice": "9"},
+                {"choice": "3"}
+            ],
+            "correctAnsChoice": "3"
+        },
+        {
+            "questions": "3-1",
+            "answerChoices": [
+                {"choice": "5"},
+                {"choice": "2"},
+                {"choice": "1"},
+                {"choice": "8"}
+            ],
+            "correctAnsChoice": "2"
+        },
+        {
+            "questions": "4x4",
+            "answerChoices": [
+                {"choice": "10"},
+                {"choice": "12"},
+                {"choice": "16"},
+                {"choice": "18"}
+            ],
+            "correctAnsChoice": "3"
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+.beginQuizCont{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70%;
+    background-color: rgba(255,255,255,0.75);
+    color: black;
+    overflow-y: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    z-index: -1;
+}
+
+.blackboard{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    background-color: grey;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.beginQuizCont h3{
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.beginQuizCont h5{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#beginquizbutton{
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    z-index: 2;
+} 
+
+#beginquizbutton:hover{
+    font-size: 1.5rem;
+    opacity: 75%;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+} 
+
+.beginQuizCont ul{
+    list-style: none;
+}
+
+.beginQuizCont li{
+    text-align: left;
+    background-color: black;
+    border: white 2px solid;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.beginQuizCont li:hover{
+    opacity: 75%;
+    text-align: left;
+    background-color: black;
+    border: white 2px solid;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.beginQuizCont button{
+    font-size: 1.25rem;
+    margin-left: 2%;
+    width: 10%;
+}
+
+.beginQuizCont h6{
+    color: red;
+    font-weight: bold;
+    font-size: 1.5rem
+}
+
+.navBTN{
+    background-color: black;
+    color: white;
+}
