@@ -28,7 +28,7 @@ function Quiz(){
             correctAnsChoice: "4",
         },
         {
-            questions: "What is one of the reasons that using the same password, for multiple applications can be considered as a bad practice?",
+            questions: "Why is it a bad practice to yous the same password for multiple applications?",
             answerChoices: [
                 {choice: "If one of the applications credentials get compromised then all the other accounts are at risk"},
                 {choice: "It can be easier to remember for the user"},
