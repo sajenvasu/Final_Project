@@ -5,13 +5,78 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 80%;
-    background-color: white;
-    opacity: 40%;
+    height: 70%;
+    background-color: rgba(255,255,255,0.75);
+    color: black;
+    overflow-y: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
 }
 
 .beginQuizCont h3{
-    font-size: 2rem;
-    color: black;
+    font-size: 2.5rem;
     text-align: center;
+}
+
+.beginQuizCont h5{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.quizbutton{
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+} 
+
+.quizbutton:hover{
+    font-size: 1.5rem;
+    opacity: 75%;
+    color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+} 
+
+.beginQuizCont ul{
+    list-style: none;
+}
+
+.beginQuizCont li{
+    text-align: left;
+    background-color: black;
+    border: white 2px solid;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.beginQuizCont li:hover{
+    opacity: 75%;
+    text-align: left;
+    background-color: black;
+    border: white 2px solid;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 1%;
+    padding-left: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.beginQuizCont button{
+    font-size: 1.25rem;
+    margin-left: 2%;
+    width: 10%;
 }
