@@ -12,7 +12,7 @@ function Games(){
             <h3 className="games-heading">GAMES</h3>
             <Link className="game1" to ="/start"> <img src={password} alt="password_strength" className="games"></img>  </Link>
             <Link className="game2" to ="/game2start"><img src={phishing} alt="phishing" className="games"></img></Link>
-            <Link className="game3" to ="/game2start"><img src={quiz} alt="quiz" className="games"></img></Link>
+            <Link className="game3" to ="/beginquiz"><img src={quiz} alt="quiz" className="games"></img></Link>
         </div>
     </div>
     
