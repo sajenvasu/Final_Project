@@ -84,8 +84,8 @@ app.post('/Create', (req, res) => {
         if(user != null) {
             return res.json("Gamertag already exists")
         }
-        else if(conditionsMet===4){
-            if(password === password2){
+        else if(password === password2){
+            if(conditionsMet===4){
                 bcrypt.hash(password, 10)
                 .then(hash => {
                     UserModel.create({gametag, password: hash})
@@ -94,10 +94,10 @@ app.post('/Create', (req, res) => {
                 }).catch(err => res.json(err))
             }
             else{
-                return res.json("Passwords do not match")
+                return res.json("Password not strong enough")
             }
         }
-        else return res.json("Password not strong enough")        
+        else return res.json("Passwords do not match")        
     })
 })
 
