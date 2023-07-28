@@ -25,7 +25,6 @@ import Email3 from './game2/email3';
 
 import Beginquiz from './game3/beginquiz';
 import Quiz from './game3/quiz';
-import Score from './game3/scores'
 
 function App() {
     
@@ -58,7 +57,6 @@ function App() {
 
             <Route path="/beginquiz" element={<Beginquiz />} />
             <Route path="/quiz" element={<Quiz />} />
-            <Route path="/scores" element={<Score />} />
             
            
         </Routes>

@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-import React, {useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import './quiz-style.css';
 function Quiz(){
-    const Navigate = useNavigate();
     const [questionCount, setQuestionCount] = useState(0);
     const [lockprevBtnVal, setlockPrevBtnVal] = useState(true);
     const [locknextBtnVal, setlockNextBtnVal] = useState(false);
@@ -12,9 +11,9 @@ function Quiz(){
     const [choice3Color, setChoice3Color] = useState("black");
     const [choice4Color, setChoice4Color] = useState("black");
     const [finishedAns, setFinishedAns] = useState("");
-    const [userAnsweredChoice, setuserAnsweredChoice] = useState(["-1","-1","-1","-1","-1"]);
-    var answerkey = ["-1","-1","-1","-1", "-1"];
-
+    const [userAnsweredChoice] = useState(["-1","-1","-1","-1","-1"]);
+    const [correctAns, setCorrectAns] = useState(0);
+    const [quizcont, setQuizCont] = useState(true);
     var choiceCount = 0;
 
     const quesArr = [
@@ -67,14 +66,12 @@ function Quiz(){
                 {choice: "18"},
             ],
             correctAnsChoice: "3",
-        },
-    ]
-
-
+        }
+    ];
 
     const clickedchoice = (selectedChoice) => {
         userAnsweredChoice[questionCount] = selectedChoice;
-        console.log("**"+userAnsweredChoice[questionCount]);
+
         if (questionCount === 4 && userAnsweredChoice[questionCount] > -1){
             setlockNextBtnVal(false);
         }
@@ -86,8 +83,13 @@ function Quiz(){
             default:break;
         }
 
-        answerkey[questionCount] = quesArr[questionCount].correctAnsChoice;
-        console.log(answerkey[questionCount]);        
+        if (selectedChoice === quesArr[questionCount].correctAnsChoice){
+            console.log("Correct Answer");
+            setCorrectAns(correctAns + 1);
+        }else{
+            console.log("Wrong Answer");
+        }
+     
     }
 
     const prevques = () => {
@@ -113,7 +115,7 @@ function Quiz(){
         }
     }
 
-    const nextques = () => {
+    const Nextques = () => {
         setQuestionCount(questionCount + 1);
         if (questionCount === 0){
             setlockPrevBtnVal(false);
@@ -128,8 +130,10 @@ function Quiz(){
             if (userAnsweredChoice.includes("-1")){
                 setFinishedAns("Please check if all questions are answered!");
                 setQuestionCount(questionCount);
+                return null
             }else{
-                Navigate("/scores");
+                console.log(correctAns);
+                setQuizCont(false);
             }
         }
 
@@ -177,16 +181,29 @@ function Quiz(){
 
     return(
         <div className = "beginQuizCont">
-            <h3>{questionCount + 1}. {quesArr[questionCount].questions}</h3>
-            <ul>
-                <li id = "mcqch1" style={{backgroundColor: choice1Color}} onClick={() => clickedchoice("1")}>(A) {quesArr[questionCount].answerChoices[choiceCount + 0].choice}</li>
-                <li id = "mcqch2" style={{backgroundColor: choice2Color}} onClick={() => clickedchoice("2")}>(B) {quesArr[questionCount].answerChoices[choiceCount + 1].choice}</li>
-                <li id = "mcqch3" style={{backgroundColor: choice3Color}} onClick={() => clickedchoice("3")}>(C) {quesArr[questionCount].answerChoices[choiceCount + 2].choice}</li>
-                <li id = "mcqch4" style={{backgroundColor: choice4Color}} onClick={() => clickedchoice("4")}>(D) {quesArr[questionCount].answerChoices[choiceCount + 3].choice}</li>
-            </ul>
-            <button className = "navBTN" disabled = {lockprevBtnVal} onClick={() => prevques()}>Back</button>
-            <button className = "navBTN" disabled = {locknextBtnVal} onClick={() => nextques()}>{nextBtnVal}</button>
-            <h6>{finishedAns}</h6>
+            {quizcont ? ( 
+                <div className='ContainerQuiz'>
+                <h3>{questionCount + 1}. {quesArr[questionCount].questions}</h3>
+                <ul>
+                    <li id = "mcqch1" style={{backgroundColor: choice1Color}} onClick={() => clickedchoice("1")}>(A) {quesArr[questionCount].answerChoices[choiceCount + 0].choice}</li>
+                    <li id = "mcqch2" style={{backgroundColor: choice2Color}} onClick={() => clickedchoice("2")}>(B) {quesArr[questionCount].answerChoices[choiceCount + 1].choice}</li>
+                    <li id = "mcqch3" style={{backgroundColor: choice3Color}} onClick={() => clickedchoice("3")}>(C) {quesArr[questionCount].answerChoices[choiceCount + 2].choice}</li>
+                    <li id = "mcqch4" style={{backgroundColor: choice4Color}} onClick={() => clickedchoice("4")}>(D) {quesArr[questionCount].answerChoices[choiceCount + 3].choice}</li>
+                </ul>
+                <button className = "navBTN" disabled = {lockprevBtnVal} onClick={() => prevques()}>Back</button>
+                <button className = "navBTN" disabled = {locknextBtnVal} onClick={() => Nextques()}>{nextBtnVal}</button>
+                <h6>{finishedAns}</h6>
+                </div>
+            ):(
+                <div className = "ContainerScore">
+                <h3>Results</h3>
+                <h5>You got {correctAns} out of 5 correct.</h5>
+                <h5>{(correctAns/5)*(100)}%</h5>
+                <Link to= "/beginquiz"><button id="beginquizbutton">Retry Quiz</button></Link>
+                <Link to= "/Games"><button id="beginquizbutton">Games</button></Link>
+                </div>
+              )
+            }
         </div>
     );
 }
