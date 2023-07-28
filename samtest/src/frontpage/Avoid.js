@@ -1,5 +1,4 @@
 import '../App.css';
-import './Types.css';
 import { Link } from 'react-router-dom';
 function Avoid(){
     return(
@@ -11,7 +10,7 @@ function Avoid(){
 
                 <div  className='inside'>
                     <h2 className= "what" style={{fontSize: '50px', marginLeft: '1px', top: '10%'}}>How to Avoid these Threats:</h2>
-                    <p className="info" style={{fontSize: '20px', marginTop: '-25px'}}><b>Use Strong Passwords:</b> Create unique and complex passwords for each account and enable multi-factor authentication.
+                    <p className="info" style={{fontSize: '19px', marginTop: '-25px'}}><b>Use Strong Passwords:</b> Create unique and complex passwords for each account and enable multi-factor authentication.
                     <br></br><br></br><b>Keep Software Updated:</b> Regularly update operating systems, applications, and antivirus software to patch security vulnerabilities.
                     <br></br><br></br><b>Be Cautious with Email:</b> Avoid clicking on suspicious links or downloading attachments from unknown sources.
                     <br></br><br></br><b>Use Secure Networks:</b> Avoid using public Wi-Fi for sensitive tasks, and opt for encrypted connections (e.g., VPN) when accessing the internet.

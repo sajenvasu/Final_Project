@@ -266,7 +266,7 @@ a{
     animation: slide 2s;
     top: 10%;
     left: 10%;
-    font-size: 90px;
+    font-size: 80px;
 }
 
 
@@ -274,7 +274,7 @@ a{
     color: white;
     visibility: hidden;
     position: fixed;
-    bottom: 10%;
+    bottom: 9%;
     right: 10%;
     animation: delayFade 2s ease-in-out 3s;    
     animation-fill-mode: forwards;
@@ -415,6 +415,7 @@ h4{
     padding-left: 13px;
 }
 
+
 .games-heading{
     text-align: center;
     font-size: 60px;
@@ -439,10 +440,10 @@ h4{
 }
 
 .games{
-    max-width: 65%;
-    max-height: 65%;
+    max-width: 55%;
+    max-height: 55%;
     border-radius: 6ex;
-    margin-left: 16ex;
+    margin-left: 4.6ex;
     transition: transform 0.3s ease;
 }
 
@@ -508,7 +509,6 @@ b{
 
 .StartButton{
     margin-left: 18ex;
-    margin-top: 2ex;
     width: 15%;
     height: 15%;
     font-size: 5ex;
@@ -516,7 +516,17 @@ b{
     background: linear-gradient( #cf87ff, #9b3bdb, #6603a8);
     padding: 1%;
     cursor: pointer;
+    animation-name: updown;
+    animation-duration: 3s;
 }
+
+.StartButton:hover{                                             
+    background: linear-gradient(  #6603a8, #9b3bdb,#cf87ff);
+    padding: 1%;
+    cursor: pointer;
+    
+}
+
 
 .researchLinks{
     display: block;
@@ -524,6 +534,9 @@ b{
     text-align: center;
     font-size: 3ex;
     color: white;
+    text-decoration: underline;
+    animation-name: updown;
+    animation-duration: 3s;
 }
 
 .alert-box{
@@ -531,4 +544,33 @@ b{
     margin-left: -10ex;
     background-color: red;
     animation: fadeIn 0.5s;
+}
+
+.alert-box2{
+    margin-top: 2ex;
+    margin-left:0ex;
+    background-color: red;
+    animation: fadeIn 0.5s;
+}
+
+.alert-box3{
+    margin-top: 2ex;
+    margin-left:0ex;
+    background-color: green;
+    animation: fadeIn 0.5s;
+}
+@import url('https://fonts.cdnfonts.com/css/truly-madly-dpad');
+.ready{
+        display: block;
+        margin-top: 2ex;
+        margin-left: 1ex;
+        text-align: center;
+        font-size: 6ex;
+        color: rgb(206, 48, 206);
+        font-family: 'Truly Madly Dpad', sans-serif;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;   
+        animation-name: updown;
+    animation-duration: 3s;                              
+       
 }

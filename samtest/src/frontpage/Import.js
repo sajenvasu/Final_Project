@@ -8,7 +8,7 @@ function Import(){
             <div id = "importtab">
                 <Link to= "/"><img src= 'https://www.freeiconspng.com/uploads/arrow-icon-28.png' alt='Arrow' className='Abarrow'/></Link>
                 <div className='inside'>
-                    <p className="info" style={{marginTop:'-5px'}}><b>Protecting Personal Information:</b> It safeguards sensitive personal and financial data from being stolen or misused, preventing identity theft and fraud.
+                    <p className="info" style={{marginTop:'-35px'}}><b>Protecting Personal Information:</b> It safeguards sensitive personal and financial data from being stolen or misused, preventing identity theft and fraud.
                     <br></br><br></br>
                     <b>Securing Business Assets:</b> Cybersecurity helps protect valuable intellectual property, financial records, and trade secrets from being accessed or stolen by competitors or malicious actors.
                     <br></br><br></br>
