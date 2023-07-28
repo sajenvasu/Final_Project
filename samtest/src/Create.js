@@ -8,23 +8,23 @@ function Create(){
     const [password, setPassword] = useState()
     const [password2, checkPassword] = useState()
 
+
+
+      
+
     var text1 = "Passwords dont match"
     var text2 = "Gamertag already exists"
     var text3 = "Success"
+    var text4 = "Password not strong enough"
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:3001/Create', {gametag, password})
+        axios.post('http://localhost:3001/Create', {gametag, password, password2})
         .then(res => {
             if(res.data === "Gamertag already exists")setDialogState(2);
-            else if(res.data === "Success")setDialogState(3)
-        }).catch(err => console.log(err))
-
-        if(password === password2){
-            setDialogState(0);
-        }
-        else{
-            setDialogState(1);
-        }
+                else if(res.data === "Password not strong enough")setDialogState(4);
+                    else if(res.data === "Passwords do not match")setDialogState(1);
+                        else setDialogState(3);
+        }).catch(err => console.log(err))       
 
     }
 
@@ -48,6 +48,7 @@ function Create(){
                         <div className={`alert-box2 ${dialogState === 1 ? 'visible' : 'hidden'}`}>{text1}</div>
                         <div className={`alert-box2 ${dialogState === 2 ? 'visible' : 'hidden'}`}>{text2}</div>
                         <div className={`alert-box3 ${dialogState === 3 ? 'visible' : 'hidden'}`}>{text3}</div>
+                        <div className={`alert-box2 ${dialogState === 4 ? 'visible' : 'hidden'}`}>{text4}</div>
                         <button type="submit">Create</button>
                     </form>
                     <Link to="/Login"><button className="createbutton" style={{marginTop: '30px', marginRight: '16px'}}>Back</button></Link>

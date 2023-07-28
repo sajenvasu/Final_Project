@@ -75,21 +75,39 @@ app.get('/',verifyLogin ,(req, res) => {
             .catch(err => res.json(err))
         }).catch(err => res.json(err))
 })*/
+
+const calculatePasswordStrength = (password) => {
+    const hasLowercase = /[a-z]/.test(password);
+    const hasUppercase = /[A-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasMinLength = password.length >= 8;
+  
+    const conditionsMet =
+      hasLowercase + hasUppercase + hasNumber + hasMinLength;      
+    return {conditionsMet};
+  };
 app.post('/Create', (req, res) => {
-    const {gametag, password} = req.body;
+    const {gametag, password, password2} = req.body;
     UserModel.findOne({gametag: gametag})
     .then(user => {
+        const { conditionsMet } = calculatePasswordStrength(password);
         if(user != null) {
             return res.json("Gamertag already exists")
         }
-        else{
-            bcrypt.hash(password, 10)
-            .then(hash => {
-                UserModel.create({gametag, password: hash})
-                .then(user => res.json("Success"))
-                .catch(err => res.json(err))
-            }).catch(err => res.json(err))
+        else if(conditionsMet===4){
+            if(password === password2){
+                bcrypt.hash(password, 10)
+                .then(hash => {
+                    UserModel.create({gametag, password: hash})
+                    .then(user => res.json("Success"))
+                    .catch(err => res.json(err))
+                }).catch(err => res.json(err))
+            }
+            else{
+                return res.json("Passwords do not match")
+            }
         }
+        else return res.json("Password not strong enough")        
     })
 })
 
