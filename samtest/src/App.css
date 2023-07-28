@@ -517,6 +517,13 @@ b{
     cursor: pointer;
 }
 
+.StartButton:hover{                                             
+    background: linear-gradient(  #6603a8, #9b3bdb,#cf87ff);
+    padding: 1%;
+    cursor: pointer;
+}
+
+
 .researchLinks{
     display: block;
     margin-top: 1ex;

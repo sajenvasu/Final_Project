@@ -13,6 +13,7 @@ function Links(){
                 </div>
                 <a href='https://www.cisco.com/c/en/us/products/security/common-cyberattacks.html' className='researchLinks' target='_blank' rel="noreferrer" style={{marginTop: '6ex'}}>Common Cyberattacks- Cisco</a>
                 <a href='https://onlinedegrees.sandiego.edu/top-cyber-security-threats/' className='researchLinks' target='_blank' rel="noreferrer">Top Cybersecurity Threats</a>
+                <a href='https://www.gartner.com/smarterwithgartner/6-ways-to-defend-against-a-ransomware-attack' className='researchLinks' target='_blank' rel="noreferrer">6 Ways to Defend Against Ransomware</a>
                 <p className='ready'>Are you ready to play?</p>
                 <Link to="/Games"><button className='StartButton'>Start</button></Link>
                 <Link to="/Avoid"><p className="previous" style={{marginTop: '10ex', marginRight: '125ex'}}>{'<'}- How to avoid these threats </p></Link>
