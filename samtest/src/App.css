@@ -515,12 +515,15 @@ b{
     background: linear-gradient( #cf87ff, #9b3bdb, #6603a8);
     padding: 1%;
     cursor: pointer;
+    animation-name: updown;
+    animation-duration: 3s;
 }
 
 .StartButton:hover{                                             
     background: linear-gradient(  #6603a8, #9b3bdb,#cf87ff);
     padding: 1%;
     cursor: pointer;
+    
 }
 
 
@@ -531,6 +534,8 @@ b{
     font-size: 3ex;
     color: white;
     text-decoration: underline;
+    animation-name: updown;
+    animation-duration: 3s;
 }
 
 .alert-box{
@@ -563,6 +568,8 @@ b{
         color: rgb(206, 48, 206);
         font-family: 'Truly Madly Dpad', sans-serif;
         -webkit-text-stroke-width: 1.5px;
-        -webkit-text-stroke-color: black;                                 
+        -webkit-text-stroke-color: black;   
+        animation-name: updown;
+    animation-duration: 3s;                              
        
 }

@@ -9,7 +9,7 @@ function Create(){
     const [password2, checkPassword] = useState()
 
     var text1 = "Passwords dont match"
-    var text2 = "Gamertag already exists. Please pick another one"
+    var text2 = "Gamertag already exists"
     var text3 = "Success"
     const handleSubmit = (e) => {
         e.preventDefault()
