@@ -65,16 +65,6 @@ app.get('/',verifyLogin ,(req, res) => {
     res.json("Success")
 })
 
-/*app.post('/Create', (req, res) => {
-    const {gametag, password} = req.body;
-    
-        bcrypt.hash(password, 10)
-        .then(hash => {
-            UserModel.create({gametag, password: hash})
-            .then(user => res.json("Success"))
-            .catch(err => res.json(err))
-        }).catch(err => res.json(err))
-})*/
 
 const calculatePasswordStrength = (password) => {
     const hasLowercase = /[a-z]/.test(password);
