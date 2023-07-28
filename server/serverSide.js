@@ -40,7 +40,7 @@ app.use((req, res, next) => {
 app.use(cookieParser())
 app.use(cors(corsOptions));
 
-mongoose.connect('mongodb://127.0.0.1:27017/employee');
+mongoose.connect('mongodb://127.0.0.1:27017/GameUsers');
 
 const verifyLogin = (req, res, next) => {
     const token = req.cookies.token;
@@ -65,14 +65,32 @@ app.get('/',verifyLogin ,(req, res) => {
     res.json("Success")
 })
 
+/*app.post('/Create', (req, res) => {
+    const {gametag, password} = req.body;
+    
+        bcrypt.hash(password, 10)
+        .then(hash => {
+            UserModel.create({gametag, password: hash})
+            .then(user => res.json("Success"))
+            .catch(err => res.json(err))
+        }).catch(err => res.json(err))
+})*/
 app.post('/Create', (req, res) => {
     const {gametag, password} = req.body;
-    bcrypt.hash(password, 10)
-    .then(hash => {
-        UserModel.create({gametag, password: hash})
-        .then(user => res.json("Success"))
-        .catch(err => res.json(err))
-    }).catch(err => res.json(err))
+    UserModel.findOne({gametag: gametag})
+    .then(user => {
+        if(user != null) {
+            return res.json("Gamertag already exists")
+        }
+        else{
+            bcrypt.hash(password, 10)
+            .then(hash => {
+                UserModel.create({gametag, password: hash})
+                .then(user => res.json("Success"))
+                .catch(err => res.json(err))
+            }).catch(err => res.json(err))
+        }
+    })
 })
 
 app.post('/Login', (req, res) => {
@@ -82,10 +100,10 @@ app.post('/Login', (req, res) => {
         if(user) {
             bcrypt.compare(password, user.password, (err, response) => {
                 if(response) {
-                  const token = jwt.sign({gametag: user.gametag, role: user.role},
+                  const token = jwt.sign({gametag: user.gametag},
                         "jwt-secret-key", {expiresIn: '1d'})  
                     res.cookie('token', token)
-                    return res.json({Status: "Success", role: user.role})
+                    return res.json({Status: "Success"})
                 }else {
                     return res.json("The password is incorrect")
                 }

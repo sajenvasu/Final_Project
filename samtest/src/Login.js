@@ -26,7 +26,7 @@ function Login(){
 
     const showDialog = (text2) => {
         setText(()=> text2);
-        setDialogState((prevState) => prevState + 1);
+        setDialogState(1);
 
 
     };
@@ -45,7 +45,7 @@ function Login(){
                     <div className="rememberme" style={{marginLeft: '10px', paddingLeft: '70px'}}>
                         <input type="checkbox" id="remember" name="rememberme"></input>
                         <label htmlFor="rememberme" style={{padding: '10px'}}>Remember Me</label>
-                        <div className={`alert-box ${dialogState >= 1 ? 'visible' : 'hidden'}`}>{text1}</div>
+                        <div className={`alert-box ${dialogState === 1 ? 'visible' : 'hidden'}`}>{text1}</div>
                     </div>
                     <label htmlFor="forgotpass" style={{paddingLeft: '12px'}}><br></br>Forgot Password?</label>
                     <button type="submit">Login</button>
