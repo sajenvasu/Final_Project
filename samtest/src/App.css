@@ -266,7 +266,7 @@ a{
     animation: slide 2s;
     top: 10%;
     left: 10%;
-    font-size: 90px;
+    font-size: 80px;
 }
 
 
@@ -274,7 +274,7 @@ a{
     color: white;
     visibility: hidden;
     position: fixed;
-    bottom: 10%;
+    bottom: 9%;
     right: 10%;
     animation: delayFade 2s ease-in-out 3s;    
     animation-fill-mode: forwards;
@@ -508,7 +508,6 @@ b{
 
 .StartButton{
     margin-left: 18ex;
-    margin-top: 2ex;
     width: 15%;
     height: 15%;
     font-size: 5ex;
@@ -524,6 +523,7 @@ b{
     text-align: center;
     font-size: 3ex;
     color: white;
+    text-decoration: underline;
 }
 
 .alert-box{
@@ -538,4 +538,24 @@ b{
     margin-left:0ex;
     background-color: red;
     animation: fadeIn 0.5s;
+}
+
+.alert-box3{
+    margin-top: 2ex;
+    margin-left:0ex;
+    background-color: green;
+    animation: fadeIn 0.5s;
+}
+@import url('https://fonts.cdnfonts.com/css/truly-madly-dpad');
+.ready{
+        display: block;
+        margin-top: 2ex;
+        margin-left: 1ex;
+        text-align: center;
+        font-size: 6ex;
+        color: rgb(206, 48, 206);
+        font-family: 'Truly Madly Dpad', sans-serif;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;                                 
+       
 }

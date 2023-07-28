@@ -1,5 +1,4 @@
 import '../App.css';
-import './Types.css';
 import { Link } from 'react-router-dom';
 function Types(){
     return(
@@ -11,7 +10,7 @@ function Types(){
                 
                 <div  className='inside'>
                     <h2 className= "what" style={{fontSize: '50px', marginLeft: '1ex', marginTop: '50px'}}>Types of Security Threats:</h2>
-                    <p className="info" style={{fontSize: '20px', marginTop: '-25px'}}><b>Malware:</b> Malicious software like viruses, worms, Trojans, and ransomware that infect systems and cause harm or data loss.
+                    <p className="info" style={{fontSize: '19px', marginTop: '-25px'}}><b>Malware:</b> Malicious software like viruses, worms, Trojans, and ransomware that infect systems and cause harm or data loss.
                     <br></br><br></br><b>Phishing:</b> Deceptive emails, messages, or websites that trick users into revealing sensitive information like passwords or credit card details.
                     <br></br><br></br><b>Hacking and Unauthorized Access:</b> Intrusions into computer systems, networks, or accounts to gain unauthorized access or control.
                     <br></br><br></br><b>Distributed Denial of Service (DDoS) Attacks:</b> Overloading a system or website with an excessive amount of traffic, making it unavailable to legitimate users.
