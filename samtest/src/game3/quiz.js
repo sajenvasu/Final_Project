@@ -69,6 +69,14 @@ function Quiz(){
 
 
     const clickedchoice = (selectedChoice) => {
+        console.log(selectedChoice);
+        switch(selectedChoice){
+            case "1":{ setChoice1Color("green"); setChoice2Color("black"); setChoice3Color("black"); setChoice4Color("black");break;}
+            case "2":{ setChoice1Color("black"); setChoice2Color("green"); setChoice3Color("black"); setChoice4Color("black");break;}
+            case "3":{ setChoice1Color("black"); setChoice2Color("black"); setChoice3Color("green"); setChoice4Color("black");break;}
+            case "4":{ setChoice1Color("black"); setChoice2Color("black"); setChoice3Color("black"); setChoice4Color("green");break;}
+            default:break;
+        }
         if (selectedChoice === quesArr[questionCount].correctAnsChoice){
             console.log("Correct");
         }else{
@@ -109,9 +117,9 @@ function Quiz(){
             <h3>{questionCount + 1}. {quesArr[questionCount].questions}</h3>
             <ul>
                 <li id = "mcqch1" style={{backgroundColor: choice1Color}} onClick={() => clickedchoice("1")}>(A) {quesArr[questionCount].answerChoices[choiceCount + 0].choice}</li>
-                <li id = "mcqch2" style={{backgroundColor: {choice2Color}}} onClick={() => clickedchoice("2")}>(B) {quesArr[questionCount].answerChoices[choiceCount + 1].choice}</li>
-                <li id = "mcqch3" style={{backgroundColor: {choice3Color}}} onClick={() => clickedchoice("3")}>(C) {quesArr[questionCount].answerChoices[choiceCount + 2].choice}</li>
-                <li id = "mcqch4" style={{backgroundColor: {choice4Color}}} onClick={() => clickedchoice("4")}>(D) {quesArr[questionCount].answerChoices[choiceCount + 3].choice}</li>
+                <li id = "mcqch2" style={{backgroundColor: choice2Color}} onClick={() => clickedchoice("2")}>(B) {quesArr[questionCount].answerChoices[choiceCount + 1].choice}</li>
+                <li id = "mcqch3" style={{backgroundColor: choice3Color}} onClick={() => clickedchoice("3")}>(C) {quesArr[questionCount].answerChoices[choiceCount + 2].choice}</li>
+                <li id = "mcqch4" style={{backgroundColor: choice4Color}} onClick={() => clickedchoice("4")}>(D) {quesArr[questionCount].answerChoices[choiceCount + 3].choice}</li>
             </ul>   
             <button disabled = {prevBtnVal} onClick={() => prevques()}>Back</button>
             <button onClick={() => nextques()}>{nextBtnVal}</button>
