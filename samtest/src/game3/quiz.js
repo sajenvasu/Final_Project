@@ -348,8 +348,7 @@ function Quiz(){
             console.log(userAnsweredChoice);
             if (userAnsweredChoice.includes("-1")){
                 setFinishedAns("Please check if all questions are answered!");
-                // alert("PLEASE CHECK");
-                setQuestionCount(questionCount);
+                setQuestionCount(questionCount + 0);
                 return null
             }else{
                 console.log(correctAns);

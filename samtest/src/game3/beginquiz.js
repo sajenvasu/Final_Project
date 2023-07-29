@@ -1,7 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './quiz-style.css';
 import image from './images/jasnoor.PNG';
-import blackboard from './images/blackboard.png';
 
 function Beginquiz(){
     const arr = []
