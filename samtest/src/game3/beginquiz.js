@@ -1,14 +1,30 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './quiz-style.css';
 import image from './images/jasnoor.PNG';
 import blackboard from './images/blackboard.png';
 
-function beginquiz(){
+function Beginquiz(){
+    const arr = []
+    const navigate = useNavigate();
+    const wRun = 1;
+    const StartQuiz = () => {
+        for (let i = 0; i < 5; i++){
+            while (wRun === 1){
+                var RDValue = Math.floor(Math.random() * (15 - 0 + 1)) + 0;
+                if (!arr.includes(RDValue)){
+                    arr.push(RDValue);
+                    break;
+                }
+            }
+        }
+        navigate("/quiz", {state : {arr : arr}});
+    }
+
     return(
         <div className = "beginQuizCont">
             <h3>Quiz</h3>
             <h5>After learning about cybersecurity threats take <br/>this quiz to test your knowledge!</h5>
-            <Link to= "/quiz"><button id="beginquizbutton">Begin!</button></Link>
+            <button id="beginquizbutton" onClick={() => StartQuiz()}>Begin!</button>
 
             
             
@@ -18,4 +34,4 @@ function beginquiz(){
         
     );
 }
-export default beginquiz;
+export default Beginquiz;

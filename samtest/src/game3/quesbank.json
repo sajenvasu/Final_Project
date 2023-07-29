@@ -1,54 +1,205 @@
 {
-    "quesArr" : [
+    "quesArr":[
+        
         {
-            "questions": "3+2",
-            "answerChoices": [
-                {"choice": "1"},
-                {"choice": "3"},
-                {"choice": "7"},
-                {"choice": "5"}
-            ],
-            "correctAnsChoice": "4"
-        },
-        {
-            "questions": "5+1",
-            "answerChoices": [
-                {"choice": "6"},
-                {"choice": "4"},
-                {"choice": "7"},
-                {"choice": "5"}
-            ],
-            "correctAnsChoice": "1"
-        },
-        {
-            "questions": "9+0",
-            "answerChoices": [
-                {"choice": "4"},
-                {"choice": "1"},
-                {"choice": "9"},
-                {"choice": "3"}
-            ],
-            "correctAnsChoice": "3"
-        },
-        {
-            "questions": "3-1",
-            "answerChoices": [
-                {"choice": "5"},
-                {"choice": "2"},
-                {"choice": "1"},
-                {"choice": "8"}
-            ],
-            "correctAnsChoice": "2"
-        },
-        {
-            "questions": "4x4",
-            "answerChoices": [
-                {"choice": "10"},
-                {"choice": "12"},
-                {"choice": "16"},
-                {"choice": "18"}
-            ],
-            "correctAnsChoice": "3"
-        }
+            "questions": "What should you do when receiving an email asking for your login credentials?",
+        "answerChoices": [
+            {"choice": "Reply to the email with your information"},
+            {"choice": "Send the email to other people as a warning"},
+            {"choice": "Reply back to the email with fake information to test it"},
+            {"choice": "Report the email and block it as spam"}
+        ],
+        "correctAnsChoice": "4"
+    },
+    {
+        "questions": "Why is it a bad practice to use the same password for multiple applications?",
+        "answerChoices": [
+            {"choice": "If one of the applications credentials get compromised then all the other accounts are at risk"},
+            {"choice": "It can be easier to remember for the user"},
+            {"choice": "This will give the chance of forgetting the password and loosing the account"},
+            {"choice": "It is a common practice to have a very easy password for all of your accounts"}
+        ],
+        "correctAnsChoice": "1"
+    },
+    {
+        "questions": "What is a computer Malware?",
+        "answerChoices": [
+            {"choice": "A hardware feature used to help with optimization"},
+            {"choice": "A network attack which locks the computer from the user"},
+            {"choice": "A software that harms and steals data from the users computers"},
+            {"choice": "All of the above"}
+        ],
+        "correctAnsChoice": "3"
+    },
+    {
+        "questions": "What is Phishing?",
+        "answerChoices": [
+            {"choice": "Phishing is an online game"},
+            {"choice": "A message or an email that is built to steal important information of the user?"},
+            {"choice": "A program used to crash computers"},
+            {"choice": "A network attack which locks the computer from the user"}
+        ],
+        "correctAnsChoice": "2"
+    },
+    {
+        "questions": "How will users having stronger passwords improve the overall cybersecurity?",
+        "answerChoices": [
+            {"choice": "Gives a very professional look to the hackers"},
+            {"choice": "They can prevent viruses from accessing control over the computer"},
+            {"choice": "It decreases the chances of having an account breached"},
+            {"choice": "Showing the attackers that longer passwords dont exactly mean harder passwords."}
+        ],
+        "correctAnsChoice": "3"
+    },
+    {
+        "questions": "What is the general idea of cybersecurity?",
+        "answerChoices": [
+            {"choice": "A programming language that codes cybersecurity patches"},
+            {"choice": "Cleaning out viruses with anti-virus softwares"},
+            {"choice": "Making sure that the workplace is safe from workplace cyber attacks"},
+            {"choice": "Protecting the security of computers, networks, and data from attackers"}
+        ],
+        "correctAnsChoice": "4"
+    },
+    {
+        "questions": "What is not a type of security threat?",
+        "answerChoices": [
+            {"choice": "Phishing"},
+            {"choice": "Data Breach"},
+            {"choice": "Weak Passwords"},
+            {"choice": "Malware"}
+        ],
+        "correctAnsChoice": "3"
+    },
+    {
+        "questions": "What is the main reason of why cybersecurity is important?",
+        "answerChoices": [
+            {"choice": "because it creates a safer use of the computers on the internet"},
+            {"choice": "because it protects the personal and important data of individuals"},
+            {"choice": "because it closes vulnerabilities for attackers to enter"},
+            {"choice": "None of these"}
+        ],
+        "correctAnsChoice": "2"
+    },
+    {
+        "questions": "What word best describes, safeguarding sensitive information from being stolen?",
+        "answerChoices": [
+            {"choice": "Securing Business Assets"},
+            {"choice": "Ensuring Privacy"},
+            {"choice": "Protecting Personal Information"},
+            {"choice": "Preserving National Security"}
+        ],
+        "correctAnsChoice": "3"
+    },
+    {
+        "questions": "What word best describes, ensuring private communications and information to remain confidential?",
+        "answerChoices": [
+            {"choice": "Securing Business Assets"},
+            {"choice": "Ensuring Privacy"},
+            {"choice": "Protecting Personal Information"},
+            {"choice": "Preserving National Security"}
+        ],
+        "correctAnsChoice": "2"
+    },
+    {
+        "questions": "What word best describes, defending the critical infrastructure and government systems?",
+        "answerChoices": [
+            {"choice": "Securing Business Assets"},
+            {"choice": "Ensuring Privacy"},
+            {"choice": "Protecting Personal Information"},
+            {"choice": "Preserving National Security"}
+        ],
+        "correctAnsChoice": "4"
+    },
+    {
+        "questions": "What word best describes, protecting valuable intellect property like financial records?",
+        "answerChoices": [
+            {"choice": "Securing Business Assets"},
+            {"choice": "Ensuring Privacy"},
+            {"choice": "Protecting Personal Information"},
+            {"choice": "Preserving National Security"}
+        ],
+        "correctAnsChoice": "1"
+    },
+    {
+        "questions": "What type of threat is this, Deceptive emails, messages, or websites that tricks users into sensitive information?",
+        "answerChoices": [
+            {"choice": "Malware"},
+            {"choice": "Phishing"},
+            {"choice": "Data Breaches"},
+            {"choice": "Insider Threats"}
+        ],
+        "correctAnsChoice": "2"
+    },
+    {
+        "questions": "What type of threat is this, Unauthorized access to sensitive information, which often leads to public exposure?",
+        "answerChoices": [
+            {"choice": "Malware"},
+            {"choice": "Phishing"},
+            {"choice": "Data Breaches"},
+            {"choice": "Insider Threats"}
+        ],
+        "correctAnsChoice": "3"
+    },
+    {
+        "questions": "What type of threat is this, Suspicious actions which occur within an organization by employees or people?",
+        "answerChoices": [
+            {"choice": "Malware"},
+            {"choice": "Phishing"},
+            {"choice": "Data Breaches"},
+            {"choice": "Insider Threats"}
+        ],
+        "correctAnsChoice": "4"
+    },
+    {
+        "questions": "What type of threat is this, Dangerous programs that can infect or damage computers while breaking into data?",
+        "answerChoices": [
+            {"choice": "Malware"},
+            {"choice": "Phishing"},
+            {"choice": "Data Breaches"},
+            {"choice": "Insider Threats"}
+        ],
+        "correctAnsChoice": "1"
+    },
+    {
+        "questions": "How to avoid loosing files on your system?",
+        "answerChoices": [
+            {"choice": "Keeping the OS updated"},
+            {"choice": "Using a VPN"},
+            {"choice": "Working off of a seperate system"},
+            {"choice": "Backing up information regularly"}
+        ],
+        "correctAnsChoice": "4"
+    },
+    {
+        "questions": "What are ways to reduce the chance of having viruses on your system?",
+        "answerChoices": [
+            {"choice": "Keeping the OS updated"},
+            {"choice": "Using a VPN"},
+            {"choice": "Blocking suspicious links and not opening them up"},
+            {"choice": "All of the above"}
+        ],
+        "correctAnsChoice": "4"
+    },
+    {
+        "questions": "What is a DDOS attack?",
+        "answerChoices": [
+            {"choice": "Infecting the system with a virus"},
+            {"choice": "Blocking access to a remote system"},
+            {"choice": "Overloading a system in the network with large amount of traffic"},
+            {"choice": "Messages and emails that are suspicous when clicking"}
+        ],
+        "correctAnsChoice": "3"
+    },
+    {
+        "questions": "What is the best way to stay the safest when browsing the internet?",
+        "answerChoices": [
+            {"choice": "Using a trusted VPN service"},
+            {"choice": "Using a public wifi"},
+            {"choice": "Using a friends computer"},
+            {"choice": "Going to websites that have broken url links"}
+        ],
+        "correctAnsChoice": "1"
+    }
     ]
 }
